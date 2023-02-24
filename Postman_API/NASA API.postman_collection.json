@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "e8cdbc8f-b1ad-4b2a-8f11-3cff5132682d",
+		"name": "NASA API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24933621"
+	},
+	"item": [
+		{
+			"name": "DEMO Key",
+			"item": [
+				{
+					"name": "Coronal Mass Ejection",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 1000ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response size is less than 25000B\", function () {",
+									"    pm.expect(pm.response.responseSize).to.be.below(25000);",
+									"});",
+									"",
+									"pm.test(\"Response Header is present and correct\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+									"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+									"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+									"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+									"    pm.response.to.have.header(\"Cache-Control\", \"no-cache, no-store, max-age=0, must-revalidate\");",
+									"    pm.response.to.have.header(\"Content-Encoding\", \"gzip\");",
+									"    pm.response.to.have.header(\"Vary\", \"Accept-Encoding\");",
+									"    pm.response.to.have.header(\"Via\", \"http/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])\");",
+									"    pm.response.to.have.header(\"X-Cache\", \"MISS\");",
+									"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+									"    pm.response.to.have.header(\"X-Ratelimit-Limit\", \"40\");",
+									"    pm.response.to.have.header(\"X-Xss-Protection\", \"1; mode=block\");",
+									"    pm.response.to.have.header(\"X-Frame-Options\", \"DENY\")",
+									"});",
+									"",
+									"pm.test(\"Response assertions\", function () {",
+									"    pm.response.to.have.status(200);",
+									"    pm.response.to.be.withBody;",
+									"    pm.response.to.be.json;",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.not.have.jsonBody(\"error\");",
+									"});",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"catalog\");",
+									"    pm.expect(pm.response.text()).to.include(\"startTime\");",
+									"    pm.expect(pm.response.text()).to.include(\"sourceLocation\");",
+									"    pm.expect(pm.response.text()).to.include(\"activeRegionNum\");",
+									"    pm.expect(pm.response.text()).to.include(\"link\");",
+									"    pm.expect(pm.response.text()).to.include(\"note\");",
+									"    pm.expect(pm.response.text()).to.include(\"instruments\");",
+									"    pm.expect(pm.response.text()).to.include(\"cmeAnalyses\");",
+									"    pm.expect(pm.response.text()).to.include(\"linkedEvents\");",
+									"    pm.expect(pm.response.text()).to.include(\"activityID\");",
+									"    pm.expect(pm.response.text()).to.include(\"2017-01-03T03:12:00-CME-001\");",
+									"    pm.expect(pm.response.text()).to.include(\"M2M_CATALOG\");",
+									"    pm.expect(pm.response.text()).to.include(\"2017-01-03T03:12Z\");",
+									"    pm.expect(pm.response.text()).to.include(\"\");",
+									"    pm.expect(pm.response.text()).to.include(null);",
+									"    pm.expect(pm.response.text()).to.include(\"https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/CME/12056/-1\");",
+									"    pm.expect(pm.response.text()).to.include(\"The CME has two stages, the first starting at 03:12Z and the second at 06:00Z. The second stage merges with the first stage and that is what is measured. The source is a small off limb eruption in the SE of SDO AIA 171 between 01:55Z and 02:43Z.\");",
+									"    pm.expect(pm.response.text()).to.include(null);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.nasa.gov/DONKI/CME?startDate=2017-01-03&endDate=2017-01-03&api_key=DEMO_KEY",
+							"protocol": "https",
+							"host": [
+								"api",
+								"nasa",
+								"gov"
+							],
+							"path": [
+								"DONKI",
+								"CME"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2017-01-03"
+								},
+								{
+									"key": "endDate",
+									"value": "2017-01-03"
+								},
+								{
+									"key": "api_key",
+									"value": "DEMO_KEY"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "phoEHkUNscf2sj1vh1yWTctCTZk6XMx7HgWDQ4gM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

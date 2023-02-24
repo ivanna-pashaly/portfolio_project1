@@ -1,0 +1,1392 @@
+{
+  "id": "4689632e-41ec-45b5-af5d-8aac79fa4f2b",
+  "version": "2.0",
+  "name": "Wikipedia A-10-22",
+  "url": "https://www.wikipedia.org",
+  "tests": [{
+    "id": "666e73d7-f6a0-465f-92ff-51dc6a4e90c7",
+    "name": "Wiki - coffee",
+    "commands": [{
+      "id": "7dd956aa-667e-4ad2-af60-6f07b7497a46",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "137e4648-6500-4dbd-9816-614861661784",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x812",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aeac0dda-49fd-44dd-84fd-57e486adf815",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.central-textlogo__image",
+      "targets": [
+        ["css=.central-textlogo__image", "css:finder"],
+        ["xpath=//body[@id='www-wikipedia-org']/div[3]/h1/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Wikipedia')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "c4cb0ae6-06c1-4f4a-98a4-7021f655d4a4",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.localized-slogan",
+      "targets": [
+        ["css=.localized-slogan", "css:finder"],
+        ["xpath=//body[@id='www-wikipedia-org']/div[4]/h1/strong", "xpath:idRelative"],
+        ["xpath=//strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'The Free Encyclopedia')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "12dbd6b9-d944-480e-8a32-9c5f0e45c9e3",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=js-lang-list-button",
+      "targets": [
+        ["id=js-lang-list-button", "id"],
+        ["css=#js-lang-list-button", "css:finder"],
+        ["xpath=//button[@id='js-lang-list-button']", "xpath:attributes"],
+        ["xpath=//body[@id='www-wikipedia-org']/div[8]/button", "xpath:idRelative"],
+        ["xpath=//div[8]/button", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "d6b44ccd-b291-4d19-8779-99e24c914e06",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.central-featured",
+      "targets": [
+        ["css=.central-featured", "css:finder"],
+        ["xpath=//body[@id='www-wikipedia-org']/div[7]", "xpath:idRelative"],
+        ["xpath=//div[7]", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "8d1dcbe5-5968-42d6-bf94-ff552494d67c",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.other-project:nth-child(3) > .other-project-link",
+      "targets": [
+        ["css=.other-project:nth-child(3) > .other-project-link", "css:finder"],
+        ["xpath=//body[@id='www-wikipedia-org']/div[13]/div[3]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '//www.wiktionary.org/')]", "xpath:href"],
+        ["xpath=//div[3]/div[3]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "d91bfaac-6a49-4ab0-9ba5-ed8965f09f39",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "4a3b743f-6f01-4ecc-9e90-aa780e2c7083",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.pure-button",
+      "targets": [
+        ["css=.pure-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='search-form']/fieldset/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "6df48416-d07a-4e76-a4f6-108935c61f27",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "628f75a3-b966-49c7-925a-72666f35ae12",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "coffee"
+    }, {
+      "id": "b6e1e977-75eb-453e-b4a8-b4def9692dab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svg-search-icon",
+      "targets": [
+        ["css=.svg-search-icon", "css:finder"],
+        ["xpath=//form[@id='search-form']/fieldset/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"],
+        ["xpath=//i[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8acbec4a-0b89-435f-8c99-44332d40d825",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Coffee - Wikipedia",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2677df3f-83a2-458c-bbdc-d95351f6a9df",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.mw-page-title-main",
+      "targets": [
+        ["css=.mw-page-title-main", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Coffee')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5875a8ea-5485-4e49-b96a-e605f8005a05",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.infobox-title",
+      "targets": [
+        ["css=.infobox-title", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/table/caption", "xpath:idRelative"],
+        ["xpath=//caption", "xpath:position"],
+        ["xpath=//caption[contains(.,'Coffee')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0de52026-bca8-418d-a90b-257e2010b70b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.infobox-image img",
+      "targets": [
+        ["css=.infobox-image img", "css:finder"],
+        ["xpath=//img[@alt='Latte and dark coffee.jpg']", "xpath:img"],
+        ["xpath=//div[@id='mw-content-text']/div/table/tbody/tr/td/a/img", "xpath:idRelative"],
+        ["xpath=//td/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "965217e4-1f89-4479-a665-f0c6f4a394db",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=siteSub",
+      "targets": [
+        ["id=siteSub", "id"],
+        ["css=#siteSub", "css:finder"],
+        ["xpath=//div[@id='siteSub']", "xpath:attributes"],
+        ["xpath=//div[@id='bodyContent']/div", "xpath:idRelative"],
+        ["xpath=//div[8]/div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9af38bc0-02c4-49fe-8943-2d9429004ee9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=p > b",
+      "targets": [
+        ["css=p > b", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/p[2]/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'Coffee')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec182116-08c7-4e3a-98b0-f767c8476706",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.mw-page-title-main",
+      "targets": [
+        ["css=.mw-page-title-main", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Coffee')]", "xpath:innerText"]
+      ],
+      "value": "Coffee"
+    }, {
+      "id": "f863287e-9392-49b8-b3ab-5a5d0ce07367",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.infobox-title",
+      "targets": [
+        ["css=.infobox-title", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/table/caption", "xpath:idRelative"],
+        ["xpath=//caption", "xpath:position"],
+        ["xpath=//caption[contains(.,'Coffee')]", "xpath:innerText"]
+      ],
+      "value": "Coffee"
+    }, {
+      "id": "f6d5b502-81f3-4045-b10b-8ada2d6e40e8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.hatnote:nth-child(3)",
+      "targets": [
+        ["css=.hatnote:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]", "xpath:position"]
+      ],
+      "value": "This article is about the beverage. For other uses, see Coffee (disambiguation)."
+    }, {
+      "id": "23ab32e3-7cf0-407d-8aec-20a77972bfea",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(7)",
+      "targets": [
+        ["css=p:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Coffee is a drink prepared from roasted coffee beans. Darkly colored, bitter, and slightly acidic, coffee has a stimulating effect on humans, primarily due to its caffeine content. It is the most popular hot drink in the world.[3]')]", "xpath:innerText"]
+      ],
+      "value": "Coffee is a drink prepared from roasted coffee beans. Darkly colored, bitter, and slightly acidic, coffee has a stimulating effect on humans, primarily due to its caffeine content. It has the highest sales in the world market for hot drinks.[3]"
+    }, {
+      "id": "7e361995-dcdb-47ec-8b99-fa113895b626",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(8)",
+      "targets": [
+        ["css=p:nth-child(8)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]", "xpath:idRelative"],
+        ["xpath=//p[3]", "xpath:position"]
+      ],
+      "value": "Seeds of the Coffea plant's fruits are separated to produce unroasted green coffee beans. The beans are roasted and then ground into fine particles that are typically steeped in hot water before being filtered out, producing a cup of coffee. It is usually served hot, although chilled or iced coffee is common. Coffee can be prepared and presented in a variety of ways (e.g., espresso, French press, caffè latte, or already-brewed canned coffee). Sugar, sugar substitutes, milk, and cream are often used to mask the bitter taste or enhance the flavor."
+    }, {
+      "id": "1940de82-eda0-4eea-91b7-9e4394c8083f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=p:nth-child(7) > a:nth-child(2)",
+      "targets": [
+        ["css=p:nth-child(7) > a:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'coffee beans')])[2]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/wiki/Coffee_bean')])[2]", "xpath:href"],
+        ["xpath=//p[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cd86b9c-675f-4d79-b0de-b068daff32a9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=acidic",
+      "targets": [
+        ["linkText=acidic", "linkText"],
+        ["css=p:nth-child(7) > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'acidic')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[2]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Acid')]", "xpath:href"],
+        ["xpath=//p[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'acidic')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "666772a9-7760-4d8d-b66d-3e88690e4069",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=stimulating",
+      "targets": [
+        ["linkText=stimulating", "linkText"],
+        ["css=p:nth-child(7) > a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'stimulating')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[2]/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Stimulant')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'stimulating')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee7c4fd6-f5e1-4370-a62f-9d04933b7ba8",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=caffeine",
+      "targets": [
+        ["linkText=caffeine", "linkText"],
+        ["css=p:nth-child(7) > a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'caffeine')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[2]/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Caffeine')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'caffeine')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44a1616b-c2a6-4532-a9f2-fdbf0a9b6d6b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Coffea",
+      "targets": [
+        ["linkText=Coffea", "linkText"],
+        ["css=p:nth-child(8) > i > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Coffea')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/i/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Coffea')]", "xpath:href"],
+        ["xpath=//i/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Coffea')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "71466099-618b-4c17-a779-4d242c47bb9a",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=roasted",
+      "targets": [
+        ["linkText=roasted", "linkText"],
+        ["css=p:nth-child(8) > a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'roasted')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Coffee_roasting')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'roasted')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b58ce5a-4f8f-4207-98b5-952aebf8ee38",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=iced coffee",
+      "targets": [
+        ["linkText=iced coffee", "linkText"],
+        ["css=p:nth-child(8) > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'iced coffee')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Iced_coffee')]", "xpath:href"],
+        ["xpath=//p[3]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'iced coffee')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9ef6928-8e4d-471b-b769-19a312639ecb",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#toc-Etymology .vector-toc-text",
+      "targets": [
+        ["css=#toc-Etymology .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Etymology']/a/div", "xpath:idRelative"],
+        ["xpath=//li[2]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7b080da-04eb-4998-8614-70b54ab0b1c9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#toc-History > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-History > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-History']/a/div", "xpath:idRelative"],
+        ["xpath=//li[3]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba6cb21f-a229-469f-a20d-324689ff27be",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#toc-Cultivation_and_production > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-Cultivation_and_production > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Cultivation_and_production']/a/div", "xpath:idRelative"],
+        ["xpath=//li[5]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a858b86-b7e3-4786-ad96-ca0e2a1e4eaf",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#toc-Processing > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-Processing > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Processing']/a/div", "xpath:idRelative"],
+        ["xpath=//li[6]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3db05aec-c678-4363-b871-6270398abb63",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=#toc-Serving > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-Serving > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Serving']/a/div", "xpath:idRelative"],
+        ["xpath=//li[7]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a63b6d8-f8d3-4412-b360-8302cfe58f28",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#toc-Biology .vector-toc-text",
+      "targets": [
+        ["css=#toc-Biology .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Biology']/a/div", "xpath:idRelative"],
+        ["xpath=//div/ul/li[4]/a/div", "xpath:position"]
+      ],
+      "value": "Biology"
+    }, {
+      "id": "42c48553-cd67-46c6-84c7-9c13af2c853a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#toc-Cultivation_and_production > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-Cultivation_and_production > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Cultivation_and_production']/a/div", "xpath:idRelative"],
+        ["xpath=//li[5]/a/div", "xpath:position"]
+      ],
+      "value": "Cultivation and production"
+    }, {
+      "id": "e9f25b2d-b364-44f7-9c27-042bb14b103f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#toc-Economics > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-Economics > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Economics']/a/div", "xpath:idRelative"],
+        ["xpath=//li[8]/a/div", "xpath:position"]
+      ],
+      "value": "Economics"
+    }, {
+      "id": "434336f1-d365-41cd-97d3-f2c241cf663c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#toc-Society_and_culture > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-Society_and_culture > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Society_and_culture']/a/div", "xpath:idRelative"],
+        ["xpath=//li[10]/a/div", "xpath:position"]
+      ],
+      "value": "Society and culture"
+    }, {
+      "id": "c25346ae-669f-46ce-8039-777e691d60d7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#toc-References > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-References > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-References']/a/div", "xpath:idRelative"],
+        ["xpath=//li[11]/a/div", "xpath:position"]
+      ],
+      "value": "References"
+    }, {
+      "id": "6e77abe5-bc5b-4aed-991a-8cec2dd92cdc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.infobox-image img",
+      "targets": [
+        ["css=.infobox-image img", "css:finder"],
+        ["xpath=//img[@alt='Latte and dark coffee.jpg']", "xpath:img"],
+        ["xpath=//div[@id='mw-content-text']/div/table/tbody/tr/td/a/img", "xpath:idRelative"],
+        ["xpath=//td/a/img", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "f93b187d-971a-4066-b498-05760a173266",
+      "comment": "",
+      "command": "click",
+      "target": "css=.infobox-image img",
+      "targets": [
+        ["css=.infobox-image img", "css:finder"],
+        ["xpath=//img[@alt='Latte and dark coffee.jpg']", "xpath:img"],
+        ["xpath=//div[@id='mw-content-text']/div/table/tbody/tr/td/a/img", "xpath:idRelative"],
+        ["xpath=//td/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36f85f06-c235-4b7b-9531-eb35b11aecac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-next-image",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "734073da-1bc2-4c40-9cf3-8762facf4c4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-next-image",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c74288f0-6476-4d6b-bff5-154e844e659c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-next-image",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9001488-4314-468b-89a2-401e71df7ffa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-next-image",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "773c26b7-d696-4f74-bbd2-cef73b01f4ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-prev-image",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4b4fbf2-81a4-44f9-a46b-98155c40efc9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-prev-image",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28bcc704-84cc-497e-ae77-157848a785d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-prev-image",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f2c7b01-f2ce-4a4b-8de9-85ee97372ef9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-prev-image",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8dff3129-d467-4e09-8e4b-58a3399aa027",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97550b0c-330f-4a91-95e0-40dd29dd137b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=long history",
+      "targets": [
+        ["linkText=long history", "linkText"],
+        ["css=p:nth-child(9) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'long history')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/History_of_coffee')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'long history')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e3411a0-057a-4334-b0f2-3c19f95ac8a3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=long history",
+      "targets": [
+        ["linkText=long history", "linkText"],
+        ["css=p:nth-child(9) > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'long history')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/History_of_coffee')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'long history')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f8bab97-3634-4cd5-9b44-f74dda972977",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.mw-page-title-main",
+      "targets": [
+        ["css=.mw-page-title-main", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'History of coffee')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72b9be36-0172-4b20-8728-69054b630e19",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "History of coffee - Wikipedia",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4089e29f-4e73-41fa-bad4-dfd0ef659f60",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.mw-page-title-main",
+      "targets": [
+        ["css=.mw-page-title-main", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'History of coffee')]", "xpath:innerText"]
+      ],
+      "value": "History of coffee"
+    }, {
+      "id": "89efcb0a-b8a2-4554-ac47-858a2c72880a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(5)",
+      "targets": [
+        ["css=p:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'The history of coffee dates back to centuries of old oral tradition in Italy Coffee plants grew wild in Yemen and were widely used by nomadic tribes for thousands of years. Sufi monasteries in Yemen employed coffee as an aid to concentration during prayers. Roasting the seeds was not a way to serve coffee until the 1400s.[1] During the cultivation, brewed coffee was reserved exclusively for the priesthood and the medical profession; doctors would use the brew for patients experiencing a need for better digestion, and priests used it to stay alert during their long nights of studying for the church.[1] Coffee later spread to Europe in the early 16th century; it caused some controversy on whether it was halal in Ottoman and Mamluk society. Coffee arrived in Italy the second half of the 16th century through commercial Mediterranean trade routes, only being served to the wealthy. Central and Eastern Europeans learned of coffee from the Ottomans. By the mid 17th century, it had reached India and the East Indies.')]", "xpath:innerText"]
+      ],
+      "value": "The history of coffee dates back to centuries of old oral tradition in Italy Coffee plants grew wild in Yemen and were widely used by nomadic tribes for thousands of years. Sufi monasteries in Yemen employed coffee as an aid to concentration during prayers. Roasting the seeds was not a way to serve coffee until the 1400s.[1] During the cultivation, brewed coffee was reserved exclusively for the priesthood and the medical profession; doctors would use the brew for patients experiencing a need for better digestion, and priests used it to stay alert during their long nights of studying for the church.[1] Coffee later spread to Europe in the early 16th century; it caused some controversy on whether it was halal in Ottoman and Mamluk society. Coffee arrived in Italy the second half of the 16th century through commercial Mediterranean trade routes, only being served to the wealthy. Central and Eastern Europeans learned of coffee from the Ottomans. By the mid 17th century, it had reached India and the East Indies."
+    }, {
+      "id": "edfd85fe-a4dd-42a8-8643-a8c2cad0b3dc",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.thumb:nth-child(3) .thumbimage",
+      "targets": [
+        ["css=.thumb:nth-child(3) .thumbimage", "css:finder"],
+        ["xpath=//img[@alt='coffee']", "xpath:img"],
+        ["xpath=//div[@id='mw-content-text']/div/div[2]/div/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f056220-06bc-40a4-9e69-bb21c61bb98e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.thumb:nth-child(4) .thumbimage",
+      "targets": [
+        ["css=.thumb:nth-child(4) .thumbimage", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/div[3]/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[3]/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efddeb3e-11fe-4dc3-be5f-10942301c550",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,985.5)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0135579b-911c-4057-8021-f4d1667d86e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#toc-History > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-History > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-History']/a/div", "xpath:idRelative"],
+        ["xpath=//li[4]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2abd09c3-7db5-4c55-a08a-334f40fcd939",
+      "comment": "",
+      "command": "click",
+      "target": "css=#toc-Europe > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-Europe > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Europe']/a/div", "xpath:idRelative"],
+        ["xpath=//li[5]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7342e404-9f5c-4117-b104-ba32519343bb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6a902b1-95e2-440f-80ad-1f4002da2bf0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.history.back()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a94a5d60-71a5-425b-9e5b-21c7b24389b2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9022100a-d1c0-49bc-aaf4-4e8f87c28ef1",
+    "name": "Wiki - bicycle",
+    "commands": [{
+      "id": "ee902ef7-e6a0-4907-93f6-ffe4b6d7f4a2",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b44d417c-0ae4-4cc3-b863-5650295d604c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4a09115-2ab3-47dc-9e87-9e33822e983f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.central-textlogo__image",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "1e30e638-a7dd-4ef0-9fed-b589655c6304",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.localized-slogan",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "978ed5ea-82c9-4736-b452-ead04c0097c0",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.central-featured",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "39a292df-8e60-4ffa-967a-64b5fd3a3ad4",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=js-lang-list-button",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "a97ca24e-3803-436b-ae14-8b1088539142",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=searchInput",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "ae06f3b1-78d1-4dd3-b6d5-c7b70cea13f3",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.central-textlogo__image",
+      "targets": [
+        ["css=.central-textlogo__image", "css:finder"],
+        ["xpath=//body[@id='www-wikipedia-org']/div[8]/h1/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Wikipedia')]", "xpath:innerText"]
+      ],
+      "value": "Wikipedia"
+    }, {
+      "id": "ff2ce80d-35d0-46c0-8f5d-a882596ce4d0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.localized-slogan",
+      "targets": [
+        ["css=.localized-slogan", "css:finder"],
+        ["xpath=//body[@id='www-wikipedia-org']/div[9]/h1/strong", "xpath:idRelative"],
+        ["xpath=//strong", "xpath:position"],
+        ["xpath=//strong[contains(.,'The Free Encyclopedia')]", "xpath:innerText"]
+      ],
+      "value": "The Free Encyclopedia"
+    }, {
+      "id": "14d22e7a-e244-4fd2-aab0-75b23cc5f2d6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=js-lang-list-button",
+      "targets": [
+        ["id=js-lang-list-button", "id"],
+        ["css=#js-lang-list-button", "css:finder"],
+        ["xpath=//button[@id='js-lang-list-button']", "xpath:attributes"],
+        ["xpath=//body[@id='www-wikipedia-org']/div[13]/button", "xpath:idRelative"],
+        ["xpath=//div[13]/button", "xpath:position"]
+      ],
+      "value": "Read Wikipedia in your language "
+    }, {
+      "id": "38141be6-358a-4803-8c24-c894e1dd3e6a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.footer-sidebar-text:nth-child(2)",
+      "targets": [
+        ["css=.footer-sidebar-text:nth-child(2)", "css:finder"],
+        ["xpath=//body[@id='www-wikipedia-org']/div[17]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[17]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "Wikipedia is hosted by the Wikimedia Foundation, a non-profit organization that also hosts a range of other projects."
+    }, {
+      "id": "f75b997c-5e59-4ebd-a017-d0aaf9b0ed5a",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3591c83-3b88-4c51-9870-8226b8d4a922",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["name=search", "name"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div[@id='search-input']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "bicycle"
+    }, {
+      "id": "49921b90-5097-483f-ace1-71f3f2911722",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svg-search-icon",
+      "targets": [
+        ["css=.svg-search-icon", "css:finder"],
+        ["xpath=//form[@id='search-form']/fieldset/button/i", "xpath:idRelative"],
+        ["xpath=//button/i", "xpath:position"],
+        ["xpath=//i[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "41cfdf91-c5aa-4f35-a326-53b887874a45",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Bicycle - Wikipedia",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b383ab3b-9b77-4076-9c6d-b1fc9968342f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.mw-page-title-main",
+      "targets": [
+        ["css=.mw-page-title-main", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Bicycle')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d221f558-59cb-475c-8938-ba9ef0c21086",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.infobox-above",
+      "targets": [
+        ["css=.infobox-above", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/table[2]/tbody/tr/th", "xpath:idRelative"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Bicycle')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8710b272-a759-431d-8470-b2994bbb4041",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=p > b:nth-child(1)",
+      "targets": [
+        ["css=p > b:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/b", "xpath:idRelative"],
+        ["xpath=//p[3]/b", "xpath:position"],
+        ["xpath=//b[contains(.,'bicycle')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55af4839-4cc8-4b9e-9da0-b8d897f691d7",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=p > b:nth-child(2)",
+      "targets": [
+        ["css=p > b:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/b[2]", "xpath:idRelative"],
+        ["xpath=//p[3]/b[2]", "xpath:position"],
+        ["xpath=//b[contains(.,'pedal cycle')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4709c563-c2d9-45d6-a872-d2853611dc76",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=p > b:nth-child(4)",
+      "targets": [
+        ["css=p > b:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/b[4]", "xpath:idRelative"],
+        ["xpath=//p[3]/b[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5afd43d9-1bee-4152-8ca4-ccf98550cf42",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.mw-page-title-main",
+      "targets": [
+        ["css=.mw-page-title-main", "css:finder"],
+        ["xpath=//h1[@id='firstHeading']/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Bicycle')]", "xpath:innerText"]
+      ],
+      "value": "Bicycle"
+    }, {
+      "id": "beea6c7a-ada0-4743-a52e-10213435f653",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.infobox-above",
+      "targets": [
+        ["css=.infobox-above", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/table[2]/tbody/tr/th", "xpath:idRelative"],
+        ["xpath=//th", "xpath:position"],
+        ["xpath=//th[contains(.,'Bicycle')]", "xpath:innerText"]
+      ],
+      "value": "Bicycle"
+    }, {
+      "id": "5b57138f-5201-412e-9ef2-dd663d8846dd",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=p:nth-child(13)",
+      "targets": [
+        ["css=p:nth-child(13)", "css:finder"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]", "xpath:idRelative"],
+        ["xpath=//p[3]", "xpath:position"]
+      ],
+      "value": " The bicycle's invention has had an enormous effect on society, both in terms of culture and of advancing modern industrial methods. Several components that played a key role in the development of the automobile were initially invented for use in the bicycle, including ball bearings, pneumatic tires, chain-driven sprockets and tension-spoked wheels.[10]"
+    }, {
+      "id": "f92da5e2-460e-4230-b3d9-dd4d3ff17b9f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=human-powered",
+      "targets": [
+        ["linkText=human-powered", "linkText"],
+        ["css=p:nth-child(13) > a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'human-powered')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/wiki/Human-powered_transport')])[2]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'human-powered')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "68cc34f3-f492-4533-9b5f-464bdf5abf86",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=motor-powered",
+      "targets": [
+        ["linkText=motor-powered", "linkText"],
+        ["css=p:nth-child(13) > a:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'motor-powered')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/wiki/Motorized_bicycle')])[2]", "xpath:href"],
+        ["xpath=//p[3]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'motor-powered')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "5e89ac23-1680-4c5d-b43a-daf70a0e8c16",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=pedal-driven",
+      "targets": [
+        ["linkText=pedal-driven", "linkText"],
+        ["css=p:nth-child(13) > a:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'pedal-driven')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/wiki/Bicycle_pedal')])[2]", "xpath:href"],
+        ["xpath=//p[3]/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'pedal-driven')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "d7ea4261-8fa2-43b9-af2a-9075baa6269b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=single-track vehicle",
+      "targets": [
+        ["linkText=single-track vehicle", "linkText"],
+        ["css=p:nth-child(13) > a:nth-child(8)", "css:finder"],
+        ["xpath=//a[contains(text(),'single-track vehicle')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Single-track_vehicle')]", "xpath:href"],
+        ["xpath=//p[3]/a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'single-track vehicle')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "cb3b7500-8bd4-4efc-abd0-22ae8a2f51fc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=frame",
+      "targets": [
+        ["linkText=frame", "linkText"],
+        ["css=p:nth-child(13) > a:nth-child(10)", "css:finder"],
+        ["xpath=//a[contains(text(),'frame')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[3]/a[6]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/wiki/Bicycle_frame')])[2]", "xpath:href"],
+        ["xpath=//p[3]/a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'frame')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "dba05e0b-4882-416c-9953-2de69173372f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=means of transportation",
+      "targets": [
+        ["linkText=means of transportation", "linkText"],
+        ["css=p:nth-child(14) > .mw-redirect:nth-child(7)", "css:finder"],
+        ["xpath=//a[contains(text(),'means of transportation')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Means_of_transportation')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'means of transportation')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "eb18b547-ff24-43ca-9c55-2a853d52f6ee",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=general fitness",
+      "targets": [
+        ["linkText=general fitness", "linkText"],
+        ["css=p:nth-child(14) > a:nth-child(9)", "css:finder"],
+        ["xpath=//a[contains(text(),'general fitness')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[4]/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Physical_fitness')]", "xpath:href"],
+        ["xpath=//p[4]/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'general fitness')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "e767d14b-4006-40ca-9864-a6547a4de3b9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=bicycle racing",
+      "targets": [
+        ["linkText=bicycle racing", "linkText"],
+        ["css=.mw-redirect:nth-child(11)", "css:finder"],
+        ["xpath=//a[contains(text(),'bicycle racing')]", "xpath:link"],
+        ["xpath=//div[@id='mw-content-text']/div/p[4]/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/wiki/Bicycle_racing')]", "xpath:href"],
+        ["xpath=//p[4]/a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'bicycle racing')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "f8e8c399-2a11-4a99-98b5-a05ba516d891",
+      "comment": "",
+      "command": "click",
+      "target": "css=#toc-Etymology .vector-toc-text",
+      "targets": [
+        ["css=#toc-Etymology .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Etymology']/a/div", "xpath:idRelative"],
+        ["xpath=//li[2]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c08eafb1-bc13-454d-b8d0-7b3e6b59e565",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Etymology')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e94c7f7-64c8-4f1b-a639-690cbd6dfe37",
+      "comment": "",
+      "command": "click",
+      "target": "css=#toc-Uses .vector-toc-text",
+      "targets": [
+        ["css=#toc-Uses .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Uses']/a/div", "xpath:idRelative"],
+        ["xpath=//li[4]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33dbbdef-aa12-4983-9c01-5eb111bbeba1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Uses')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "529c6911-e5a6-4507-b0fa-37342e0df374",
+      "comment": "",
+      "command": "click",
+      "target": "css=#toc-History .vector-toc-text",
+      "targets": [
+        ["css=#toc-History .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-History']/a/div", "xpath:idRelative"],
+        ["xpath=//li[3]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "80684a26-2283-4277-b778-f467c1704a00",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'History')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa52902f-4002-4169-90bd-2848d6e49126",
+      "comment": "",
+      "command": "click",
+      "target": "css=#toc-Technical_aspects > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-Technical_aspects > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Technical_aspects']/a/div", "xpath:idRelative"],
+        ["xpath=//li[5]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bee5c1d8-5c5e-4414-ace7-84d7f501670a",
+      "comment": "",
+      "command": "click",
+      "target": " xpath=//span[contains(.,'Technical aspects')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3189701-0098-491c-b297-2f810350aa29",
+      "comment": "",
+      "command": "click",
+      "target": "css=#toc-Maintenance_and_repair > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-Maintenance_and_repair > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Maintenance_and_repair']/a/div", "xpath:idRelative"],
+        ["xpath=//div/ul/li[7]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d360f3f-e187-40e9-b171-f22bf14c8960",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Maintenance and repair')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7406595-50aa-4a37-a434-54b5674af154",
+      "comment": "",
+      "command": "click",
+      "target": "css=#toc-Notes .vector-toc-text",
+      "targets": [
+        ["css=#toc-Notes .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Notes']/a/div", "xpath:idRelative"],
+        ["xpath=//div/ul/li[10]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71b66eae-90ec-425d-828b-053c2a855c82",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Social and historical aspects')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37aa7c81-a7fb-4b6b-8e91-0f220ab84447",
+      "comment": "",
+      "command": "click",
+      "target": "css=#toc-Social_and_historical_aspects > .vector-toc-link > .vector-toc-text",
+      "targets": [
+        ["css=#toc-Social_and_historical_aspects > .vector-toc-link > .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-Social_and_historical_aspects']/a/div", "xpath:idRelative"],
+        ["xpath=//div/ul/li[8]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "faad49f6-38e3-4a97-bab7-4951764b3483",
+      "comment": "",
+      "command": "click",
+      "target": " xpath=//span[contains(.,'See also')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60dec3a6-8a99-4977-879a-86555e610478",
+      "comment": "",
+      "command": "click",
+      "target": "css=#toc-See_also .vector-toc-text",
+      "targets": [
+        ["css=#toc-See_also .vector-toc-text", "css:finder"],
+        ["xpath=//li[@id='toc-See_also']/a/div", "xpath:idRelative"],
+        ["xpath=//div/ul/li[9]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62ae9824-59b6-4532-a39c-68beb750431c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Notes')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5028c834-3c25-4976-a85b-ae2212e8ac38",
+      "comment": "",
+      "command": "click",
+      "target": "css=.infobox-image img",
+      "targets": [
+        ["css=.infobox-image img", "css:finder"],
+        ["xpath=//img[@alt='Left side of Flying Pigeon.jpg']", "xpath:img"],
+        ["xpath=//div[@id='mw-content-text']/div/table[2]/tbody/tr[2]/td/a/img", "xpath:idRelative"],
+        ["xpath=//td/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7641884-cfdb-4ff6-8c07-3bee6d359daf",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d5d4f14-b340-4e46-8b0e-60065d51872b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-next-image",
+      "targets": [
+        ["css=.mw-mmv-next-image", "css:finder"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "838b59b9-a839-4436-901e-7412720250b8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-next-image",
+      "targets": [
+        ["css=.mw-mmv-next-image", "css:finder"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed173de0-82ef-4c3f-a509-44ee96a360df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-next-image",
+      "targets": [
+        ["css=.mw-mmv-next-image", "css:finder"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccf06a3c-f68d-4e92-8bdc-5cf9ca252a9b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-next-image",
+      "targets": [
+        ["css=.mw-mmv-next-image", "css:finder"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1eba445-a768-468a-bdec-8f26aadca5da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-next-image",
+      "targets": [
+        ["css=.mw-mmv-next-image", "css:finder"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ab393f8-3dab-47f3-98d8-37c4e7d9b4f8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-prev-image",
+      "targets": [
+        ["css=.mw-mmv-prev-image", "css:finder"],
+        ["xpath=//button[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2b69ee2-7555-45b7-bbde-a9e6de689e7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-prev-image",
+      "targets": [
+        ["css=.mw-mmv-prev-image", "css:finder"],
+        ["xpath=//button[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79660eb8-a005-4849-966c-465327621209",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-prev-image",
+      "targets": [
+        ["css=.mw-mmv-prev-image", "css:finder"],
+        ["xpath=//button[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "112d3b96-ab4a-4639-a834-1f170569880b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-prev-image",
+      "targets": [
+        ["css=.mw-mmv-prev-image", "css:finder"],
+        ["xpath=//button[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f92924e3-b75c-4497-b1d6-55d0a84013f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-prev-image",
+      "targets": [
+        ["css=.mw-mmv-prev-image", "css:finder"],
+        ["xpath=//button[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd62c256-63b6-424a-9334-a6d565f31547",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mw-mmv-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c09abaad-8816-423f-86ea-a8f49913fe7e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.history.back()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb74e4c1-0030-4bc9-b0ea-ea6b17c45d05",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e8bdeab-708b-4ade-805b-23acd3b1bef3",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7ce0e61f-a643-451a-b3f9-45070670b1f4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["666e73d7-f6a0-465f-92ff-51dc6a4e90c7"]
+  }],
+  "urls": ["https://www.wikipedia.org/"],
+  "plugins": []
+}

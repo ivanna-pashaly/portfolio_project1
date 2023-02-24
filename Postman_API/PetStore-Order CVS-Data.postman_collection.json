@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "dc9c02f2-c7fd-4c21-9add-8114746eabfe",
+		"name": "PetStore-Order CVS-Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24933621"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response Time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response Size is less than 500B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Current ID is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.eql(pm.interationData.get(\"ID\"));",
+							"});",
+							"",
+							"pm.test(\"Current Pet-ID is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.petId).to.eql(pm.interationData.get(\"PETID\"));",
+							"});",
+							"",
+							"pm.test(\"Current Quantity is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.quantity).to.eql(pm.interationData.get(\"QT\"));",
+							"});",
+							"",
+							"pm.test(\"Current Status is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.status).to.eql(pm.interationData.get(\"STS\"));",
+							"});",
+							"",
+							"pm.test(\"Current Status is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.complete).to.eql(Boolean(pm.interationData.get(\"COM\")));",
+							"});",
+							"",
+							"pm.test(\"Header is correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+							"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+							"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+							"});",
+							"",
+							"pm.test(\"response should be okay to process\", function () {",
+							"    pm.response.to.not.be.error;",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"    pm.response.to.not.have.jsonBody(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Response body should be in correct format\", function () {",
+							"    let jsonResponse = pm.response.json();",
+							"    pm.expect(jsonResponse.id).to.be.a('number');",
+							"    pm.expect(jsonResponse.petId).to.be.a('number');",
+							"    pm.expect(jsonResponse.quantity).to.be.a('number');",
+							"    pm.expect(jsonResponse.shipDate).to.be.a('string');",
+							"    pm.expect(jsonResponse.status).to.be.a('string');",
+							"    pm.expect(jsonResponse.complete).to.be.a('boolean');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": {{ID}},\n    \"petId\": {{PETID}},\n    \"quantity\": {{QT}},\n    \"shipDate\": \"2023-01-08T22:03:31.149Z\",\n    \"status\": \"{{STS}}\",\n    \"complete\": {{COM}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response Time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response Size is less than 500 B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Current ID is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.eql(pm.interationData.get(\"ID\"));",
+							"});",
+							"",
+							"pm.test(\"Current Pet-ID is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.petId).to.eql(pm.interationData.get(\"PETID\"));",
+							"});",
+							"",
+							"pm.test(\"Current Quantity is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.quantity).to.eql(pm.interationData.get(\"QT\"));",
+							"});",
+							"",
+							"pm.test(\"Current Status is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.status).to.eql(pm.interationData.get(\"STS\"));",
+							"});",
+							"",
+							"pm.test(\"Current Status is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.complete).to.eql(Boolean(pm.interationData.get(\"COM\")));",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order/{{ID}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"m.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response Time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response Size is less than 500 B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Current ID is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.id).to.eql(\"\" + pm.interationData.get(\"ID\"));",
+							"});",
+							"",
+							"pm.test(\"Type key/value is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+							"});",
+							"",
+							"pm.test(\"Code key/value is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order/{{ID}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

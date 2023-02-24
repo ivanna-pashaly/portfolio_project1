@@ -1,0 +1,478 @@
+{
+  "id": "e0a028a9-15b8-40a3-8c85-ce25ef73aae6",
+  "version": "2.0",
+  "name": "Lexus",
+  "url": "https://www.lexus.com",
+  "tests": [{
+    "id": "3568a063-b5a6-49c0-8497-17d88663a565",
+    "name": "Lexus1",
+    "commands": [{
+      "id": "8826622a-e6e7-4884-9c0f-6ce74ceb280b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ebe763e-8c2f-416c-a659-d7e4589a7d5a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1292x771",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d3b0381-b3db-41ed-aa6e-064329f803e9",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Lexus | Experience Amazing",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac63d671-5151-47d4-970b-814df3689529",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.swiper-slide:nth-child(4) .sc-fyrocj",
+      "targets": [
+        ["css=.swiper-slide:nth-child(4) .sc-fyrocj", "css:finder"],
+        ["xpath=//div[@id='HeroSlider']/div/div/div[4]/div/div[2]/h2/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/h2/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f480b4e-577f-4d81-9aa9-72d5fa259312",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "linkText=EXPLORE",
+      "targets": [
+        ["linkText=EXPLORE", "linkText"],
+        ["css=.swiper-slide:nth-child(4) .sc-jWUzzU:nth-child(1) > .sc-jRQBWg", "css:finder"],
+        ["xpath=(//a[contains(text(),'EXPLORE')])[4]", "xpath:link"],
+        ["xpath=//div[@id='HeroSlider']/div/div/div[4]/div/div[3]/div[3]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/models/RZ')])[2]", "xpath:href"],
+        ["xpath=//div[4]/div/div[3]/div[3]/div/div/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "f0e50420-5a63-47e4-991f-e988ed7087be",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "linkText=BUILD",
+      "targets": [
+        ["linkText=BUILD", "linkText"],
+        ["css=.swiper-slide:nth-child(4) .sc-jWUzzU:nth-child(2) > .sc-jRQBWg", "css:finder"],
+        ["xpath=(//a[contains(text(),'BUILD')])[2]", "xpath:link"],
+        ["xpath=//div[@id='HeroSlider']/div/div/div[4]/div/div[3]/div[3]/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/build-your-lexus/#!/series/RZ/year/2023/trim')])[2]", "xpath:href"],
+        ["xpath=//div[4]/div/div[3]/div[3]/div/div[2]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "049444a7-ac75-4e10-9e09-679691574170",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-llYSUQ:nth-child(1)",
+      "targets": [
+        ["css=.sc-llYSUQ:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'VEHICLES')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19907f81-6602-44e6-8344-1bf8d9265f79",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.hplWVs",
+      "targets": [
+        ["css=.hplWVs", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div[3]/div/div/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'SUV')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "2ff97159-b264-4300-9685-ee51e7d1d332",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) .sc-jRQBWg:nth-child(1)",
+      "targets": [
+        ["css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) .sc-jRQBWg:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-fb8e6d64b0c38cd10']/div/div/ul/li/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'2023 UX HYBRID')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "fab5718d-34ba-41f1-b03d-bd298e9a37e5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) .sc-jRQBWg:nth-child(2)",
+      "targets": [
+        ["css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) .sc-jRQBWg:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-287cea5f872147b2']/div/div/ul/li/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//li/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "3147b721-33c6-4c83-aa67-7206aaa59d6b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-d67885ad1837d10d6']/div/div/ul/li/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/models/UX-hybrid')]", "xpath:href"],
+        ["xpath=//li/div/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "090357c8-d9e5-4696-afc9-3c63a2e7a2a9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(3) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(3) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-d67885ad1837d10d6']/div/div/ul/li/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/models/NX-hybrid')]", "xpath:href"],
+        ["xpath=//li/div[3]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "743d89ca-2f78-4299-8f29-d5c085e165ff",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(4) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(4) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-d67885ad1837d10d6']/div/div/ul/li/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/models/NX-PHEV')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "4da0c837-f6fe-4590-94b6-f06e86eacbab",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) > .sc-gUQvok",
+      "targets": [
+        ["css=.swiper-slide:nth-child(1) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) > .sc-gUQvok", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-d67885ad1837d10d6']/div/div/ul/li/div/div[2]", "xpath:idRelative"],
+        ["xpath=//li/div/div[2]", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "e99107f1-73ae-48c5-b274-e235f703c401",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-lbhJGD:nth-child(2) > .sc-eJwWfJ",
+      "targets": [
+        ["css=.sc-lbhJGD:nth-child(2) > .sc-eJwWfJ", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div[3]/div/div/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'SEDAN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae1659dc-e8bb-4b4f-a3da-989625f3146f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(2) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(2) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-4edaa892571755bd']/div[2]/div/ul/li/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/models/IS')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li/div/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "2c301e5c-4a49-4161-a1f7-fe4a0f4704da",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(2) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(2) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(2) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(2) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-4edaa892571755bd']/div[2]/div/ul/li/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/models/IS500')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li/div[2]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "b0d96ee6-c44c-4352-bf68-7e003ce694fb",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(2) .sc-jlRLRk:nth-child(3) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(2) .sc-jlRLRk:nth-child(3) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-4edaa892571755bd']/div[2]/div/ul/li/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/models/ES')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li/div[3]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "7598121a-bde6-4c3d-bc45-e39951070e90",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.hplWVs",
+      "targets": [
+        ["css=.hplWVs", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div[3]/div/div/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'SEDAN')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "fdc0bc93-f8a8-4b26-a96b-1f22513c0d78",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-lbhJGD:nth-child(3) > .sc-eJwWfJ",
+      "targets": [
+        ["css=.sc-lbhJGD:nth-child(3) > .sc-eJwWfJ", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div[3]/div/div/div/div/div[3]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'HYBRID & ELECTRIC')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbcc63ec-76c4-49f8-beb4-73bb21fa57f9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(3) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(3) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(1) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-39e53027753a753f']/div[3]/div/ul/li/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/models/UX-hybrid')])[3]", "xpath:href"],
+        ["xpath=//div[3]/div/ul/li/div/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "472f8b2b-f7b7-4e93-ac0f-ff50ca9dacca",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(3) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(2) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(3) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(2) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-39e53027753a753f']/div[3]/div/ul/li/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/models/NX-hybrid')])[3]", "xpath:href"],
+        ["xpath=//div[3]/div/ul/li/div[2]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "e9ddfe47-29ec-471c-9d18-88afefd1d004",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.hplWVs",
+      "targets": [
+        ["css=.hplWVs", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div[3]/div/div/div/div/div[3]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'HYBRID & ELECTRIC')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "a455c7fe-adf7-4155-a56b-e4aa3e1ac002",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(3) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(4) > .sc-gUQvok",
+      "targets": [
+        ["css=.swiper-slide:nth-child(3) .sc-dUbtfd:nth-child(1) > .sc-jlRLRk:nth-child(4) > .sc-gUQvok", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-39e53027753a753f']/div[3]/div/ul/li/div[4]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/ul/li/div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "2b1db538-2b0e-4b39-8934-5151ff2b2ae2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-lbhJGD:nth-child(4) > .sc-eJwWfJ",
+      "targets": [
+        ["css=.sc-lbhJGD:nth-child(4) > .sc-eJwWfJ", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div[3]/div/div/div/div/div[4]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'PERFORMANCE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5213746b-569e-4a6e-a570-04f0713925e0",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(4) .sc-dUbtfd:nth-child(2) > .sc-jlRLRk:nth-child(2) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(4) .sc-dUbtfd:nth-child(2) > .sc-jlRLRk:nth-child(2) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-48db6343a404a57f']/div[4]/div/ul/li[2]/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/models/LC-hybrid')])[3]", "xpath:href"],
+        ["xpath=//div[4]/div/ul/li[2]/div[2]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "d8f618a4-085b-417d-8615-86e39785bd11",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(4) .sc-jlRLRk:nth-child(4) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(4) .sc-jlRLRk:nth-child(4) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-48db6343a404a57f']/div[4]/div/ul/li/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/models/RCF')]", "xpath:href"],
+        ["xpath=//div[4]/div/ul/li/div[4]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "b45a82ca-c96f-488e-82aa-e6a7bb4ebd3c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.hplWVs",
+      "targets": [
+        ["css=.hplWVs", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div[3]/div/div/div/div/div[4]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'PERFORMANCE')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "2f5c13c6-4c92-4f1d-b349-218290dafd37",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(4) .sc-jlRLRk:nth-child(4) > .sc-gUQvok",
+      "targets": [
+        ["css=.swiper-slide:nth-child(4) .sc-jlRLRk:nth-child(4) > .sc-gUQvok", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-48db6343a404a57f']/div[4]/div/ul/li/div[4]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/ul/li/div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "6ea379a5-8462-4bb4-b099-154190f77873",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-lbhJGD:nth-child(5) > .sc-eJwWfJ",
+      "targets": [
+        ["css=.sc-lbhJGD:nth-child(5) > .sc-eJwWfJ", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div[3]/div/div/div/div/div[5]/span", "xpath:idRelative"],
+        ["xpath=//div[5]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'FUTURE')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b292ec79-592c-4e97-af70-756d7bef58ad",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.hplWVs",
+      "targets": [
+        ["css=.hplWVs", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div[3]/div/div/div/div/div[5]/span", "xpath:idRelative"],
+        ["xpath=//div[5]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'FUTURE')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "8c0a0f58-bcfd-4e8b-9e74-08e2a31668a0",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(5) .sc-jlRLRk:nth-child(1) > .sc-eCImPb",
+      "targets": [
+        ["css=.swiper-slide:nth-child(5) .sc-jlRLRk:nth-child(1) > .sc-eCImPb", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-cd68195cde6a27b7']/div[5]/div/ul/li/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/future/RZ')])[3]", "xpath:href"],
+        ["xpath=//div[5]/div/ul/li/div/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "52044a7e-fe1e-4124-989c-09856f37e773",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-slide:nth-child(5) .sc-jlRLRk:nth-child(1) > .sc-gUQvok",
+      "targets": [
+        ["css=.swiper-slide:nth-child(5) .sc-jlRLRk:nth-child(1) > .sc-gUQvok", "css:finder"],
+        ["xpath=//div[@id='swiper-wrapper-cd68195cde6a27b7']/div[5]/div/ul/li/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/ul/li/div/div[2]", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "eea22da3-6e9f-418a-b2c6-6ca1daa99423",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-lbhJGD:nth-child(1) > .sc-eJwWfJ",
+      "targets": [
+        ["css=.sc-lbhJGD:nth-child(1) > .sc-eJwWfJ", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div[3]/div/div/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'SUV')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96750b01-3605-40c2-9ab1-76f8e40e677f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-kfPuZi",
+      "targets": [
+        ["css=.sc-kfPuZi", "css:finder"],
+        ["xpath=//img[@alt='Lexus: Experience Amazing Home']", "xpath:img"],
+        ["xpath=//div[@id='header']/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c38c711d-3363-4550-af17-70f0de0267c8",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.sc-cxpSdN",
+      "targets": [
+        ["css=.sc-cxpSdN", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "6c54a505-c5a2-4fee-a544-8f329cc6156a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.sc-llYSUQ:nth-child(2)",
+      "targets": [
+        ["css=.sc-llYSUQ:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'SHOP')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "ee244dc2-db81-47b5-aba3-33116b27f73a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.hIcqQX:nth-child(3)",
+      "targets": [
+        ["css=.hIcqQX:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='header']/div[3]/div/div/div/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'MY LEXUS')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "72180d08-a6b6-4bf4-990d-d78fd2dd48a6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.sc-cidDSM",
+      "targets": [
+        ["css=.sc-cidDSM", "css:finder"],
+        ["xpath=//img[@alt='Search']", "xpath:img"],
+        ["xpath=//div[@id='header']/div[3]/div/div/button/img", "xpath:idRelative"],
+        ["xpath=//button/img", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "0b6b8026-79a7-442e-b02e-264a3f6e7c4e",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "73451003-ea09-4e44-b641-0fd2557e6355",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3568a063-b5a6-49c0-8497-17d88663a565"]
+  }],
+  "urls": ["https://www.lexus.com/"],
+  "plugins": []
+}

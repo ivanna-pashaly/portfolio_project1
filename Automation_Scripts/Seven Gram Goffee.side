@@ -1,0 +1,723 @@
+{
+  "id": "ac756bb4-683d-4bae-be1f-5099e934c150",
+  "version": "2.0",
+  "name": "Seven Gram Goffee",
+  "url": "https://sevengramscaffe.com",
+  "tests": [{
+    "id": "38eee40e-ce40-45ff-bd76-d9fcf58c0637",
+    "name": "Shipping Policy",
+    "commands": [{
+      "id": "674e0a20-eb2a-4e07-bc21-0299447e30ea",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d406f02f-b66a-41b3-91f4-12385c96380a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a55b4dc2-8fc2-4096-b03a-bb49a128de30",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.Header__LogoImage",
+      "targets": [
+        ["css=.Header__LogoImage", "css:finder"],
+        ["xpath=//img[@alt='Seven Grams Caffé']", "xpath:img"],
+        ["xpath=//header[@id='section-header']/div/div[2]/h1/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9f1c5f9-a88a-48e6-80fa-1cf584aaab89",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.CollectionItem:nth-child(1) .CollectionItem__Image",
+      "targets": [
+        ["css=.CollectionItem:nth-child(1) .CollectionItem__Image", "css:finder"],
+        ["xpath=//section[@id='section-collection-list']/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d10cbfb2-a984-4c6d-b92b-0afeb910c2c9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.SectionHeader__Heading--emphasize:nth-child(2)",
+      "targets": [
+        ["css=.SectionHeader__Heading--emphasize:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='Slideslide-0']/div[3]/header/h2", "xpath:idRelative"],
+        ["xpath=//div[3]/header/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'THE SWEETEST GIFT BOXES')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f67095a-f8a7-493a-bb37-e46b981c0278",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.Footer__Block--text > .Footer__Title",
+      "targets": [
+        ["css=.Footer__Block--text > .Footer__Title", "css:finder"],
+        ["xpath=//footer[@id='section-footer']/div/div/div/h2", "xpath:idRelative"],
+        ["xpath=//footer/div/div/div/h2", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4e6caa3-670b-458e-98e3-987248beb66f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Footer__Block--newsletter",
+      "targets": [
+        ["css=.Footer__Block--newsletter", "css:finder"],
+        ["xpath=//footer[@id='section-footer']/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//footer/div/div/div[3]", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "086bc946-cd4e-4aee-976a-68c40b07ef7f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Footer__Block--links > .Footer__Title",
+      "targets": [
+        ["css=.Footer__Block--links > .Footer__Title", "css:finder"],
+        ["xpath=//footer[@id='section-footer']/div/div/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/h2", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "84d9f808-1400-4503-9b68-46109f892f50",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Footer__Block--links",
+      "targets": [
+        ["css=.Footer__Block--links", "css:finder"],
+        ["xpath=//footer[@id='section-footer']/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//footer/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "a78c8bc7-f9eb-447e-85ff-535b4b6fb2c8",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=Shipping Policy",
+      "targets": [
+        ["linkText=Shipping Policy", "linkText"],
+        ["css=.Linklist__Item:nth-child(5) > .Link", "css:finder"],
+        ["xpath=//a[contains(text(),'Shipping Policy')]", "xpath:link"],
+        ["xpath=//footer[@id='section-footer']/div/div/div[2]/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/policies/shipping-policy')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Shipping Policy')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "c04391a2-3213-40da-92e8-225ddf89def0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Shipping Policy",
+      "targets": [
+        ["linkText=Shipping Policy", "linkText"],
+        ["css=.Linklist__Item:nth-child(5) > .Link", "css:finder"],
+        ["xpath=//a[contains(text(),'Shipping Policy')]", "xpath:link"],
+        ["xpath=//footer[@id='section-footer']/div/div/div[2]/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/policies/shipping-policy')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Shipping Policy')]", "xpath:innerText"]
+      ],
+      "value": "Shipping Policy"
+    }, {
+      "id": "04ae57e3-ed0d-47c0-80ef-717d3dea58c3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Shipping Policy",
+      "targets": [
+        ["linkText=Shipping Policy", "linkText"],
+        ["css=.Linklist__Item:nth-child(5) > .Link", "css:finder"],
+        ["xpath=//a[contains(text(),'Shipping Policy')]", "xpath:link"],
+        ["xpath=//footer[@id='section-footer']/div/div/div[2]/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/policies/shipping-policy')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Shipping Policy')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa17d1ce-39a1-4bfd-be31-1751b8b6bd5a",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "       Shipping policy – Seven Grams Caffé     ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1aee10b-ccd4-4a35-b22c-980b9999d645",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//main[@id='main']/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da01250a-95a9-48cf-a0e2-812aa7f29910",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.shopify-policy__container",
+      "targets": [
+        ["css=.shopify-policy__container", "css:finder"],
+        ["xpath=//main[@id='main']/div", "xpath:idRelative"],
+        ["xpath=//main/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd34d088-b6eb-40e4-8d70-6c591b54806d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Header__Icon:nth-child(1)",
+      "targets": [
+        ["css=.Header__Icon:nth-child(1)", "css:finder"],
+        ["xpath=//header[@id='section-header']/div/div/button", "xpath:idRelative"],
+        ["xpath=//header/div/div/button", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "d4f10e69-8fd5-40a1-b06e-2a5e4def99a5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Header__Icon:nth-child(2)",
+      "targets": [
+        ["css=.Header__Icon:nth-child(2)", "css:finder"],
+        ["xpath=//header[@id='section-header']/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/search')])[2]", "xpath:href"],
+        ["xpath=//header/div/div[3]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "fcd3f127-6e07-4339-8948-b0b7e88774de",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Header__Icon:nth-child(3)",
+      "targets": [
+        ["css=.Header__Icon:nth-child(3)", "css:finder"],
+        ["xpath=//header[@id='section-header']/div/div[3]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/cart')])[2]", "xpath:href"],
+        ["xpath=//div[3]/a[2]", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "0237cd3e-6b4f-49a1-82d6-09a6f9b9964e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=FAQ section",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "a65ede28-df49-4357-83c7-684b609702b7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.rte > p:nth-child(1)",
+      "targets": [
+        ["css=.rte > p:nth-child(1)", "css:finder"],
+        ["xpath=//main[@id='main']/div/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//main/div/div[2]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Please read our FAQ section to learn more about our shipping policies. Please note that we do not ship to PO boxes. ')]", "xpath:innerText"]
+      ],
+      "value": "Please read our FAQ section to learn more about our shipping policies. Please note that we do not ship to PO boxes. "
+    }, {
+      "id": "b2c0538e-8662-4209-9595-2a0578c74cf5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=FAQ section",
+      "targets": [
+        ["linkText=FAQ section", "linkText"],
+        ["css=strong > a", "css:finder"],
+        ["xpath=//a[contains(text(),'FAQ section')]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div[2]/div/p/span/strong/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://sevengramscaffe.com/pages/faq')]", "xpath:href"],
+        ["xpath=//strong/a", "xpath:position"],
+        ["xpath=//a[contains(.,'FAQ section')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c48e2eb-d767-4bf0-b522-fe3ddb3d526b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.Faq__Section:nth-child(1)",
+      "targets": [
+        ["css=.Faq__Section:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div[2]/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'BLACK FRIDAY & CYBER MONDAY SALE TERMS & CONDITIONS')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b8bd569-e93c-4ecf-9607-4ba627d9090e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.FaqSummary__Item:nth-child(4) .FaqSummary__LinkLabel",
+      "targets": [
+        ["css=.FaqSummary__Item:nth-child(4) .FaqSummary__LinkLabel", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div/ol/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'SHIPPING & RETURNS')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11547fac-cb0b-4964-9605-3f6cdb7f7394",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.Faq__Section:nth-child(15)",
+      "targets": [
+        ["css=.Faq__Section:nth-child(15)", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div[2]/div/h1[4]", "xpath:idRelative"],
+        ["xpath=//h1[4]", "xpath:position"],
+        ["xpath=//h1[contains(.,'SHIPPING & RETURNS')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5fb06df-68a8-4b20-a813-81f0a38bcf7e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Faq__Item:nth-child(16) > .Faq__ItemWrapper",
+      "targets": [],
+      "value": "2000"
+    }, {
+      "id": "78695ecf-8fd2-4387-94d5-30944f08fb95",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Faq__Item:nth-child(17) .Faq__Question",
+      "targets": [
+        ["css=.Faq__Item:nth-child(17) .Faq__Question", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div[2]/div/div[13]/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[13]/div/button", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "4b5bd085-48f0-4d6c-8400-b73b9c495dfc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Faq__Item:nth-child(18) .Faq__Question",
+      "targets": [
+        ["css=.Faq__Item:nth-child(18) .Faq__Question", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div[2]/div/div[14]/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[14]/div/button", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "ab3ce2b7-4b1b-49a3-ad5a-cbd37538b906",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Faq__Item:nth-child(19) .Faq__Question",
+      "targets": [
+        ["css=.Faq__Item:nth-child(19) .Faq__Question", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div[2]/div/div[15]/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[15]/div/button", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "dfd400e3-8788-45be-aaea-3eac035808d0",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Faq__Item:nth-child(20) .Faq__Question",
+      "targets": [
+        ["css=.Faq__Item:nth-child(20) .Faq__Question", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div[2]/div/div[16]/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[16]/div/button", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "15a3aeb3-378b-48ec-b5c1-043cf9a31d9b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Faq__Item:nth-child(21) .Faq__Question",
+      "targets": [
+        ["css=.Faq__Item:nth-child(21) .Faq__Question", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div[2]/div/div[17]/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[17]/div/button", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "495b266f-7163-4bc1-b94b-b311076e2a25",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Faq__Item:nth-child(22) .Faq__Question",
+      "targets": [
+        ["css=.Faq__Item:nth-child(22) .Faq__Question", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div[2]/div/div[18]/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[18]/div/button", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "8141ad96-c79e-4678-8de4-904e3698e51e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Faq__Item:nth-child(23) .Faq__Question",
+      "targets": [
+        ["css=.Faq__Item:nth-child(23) .Faq__Question", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div[2]/div/div[19]/div/button", "xpath:idRelative"],
+        ["xpath=//div/div[19]/div/button", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "b485e0de-6eca-4231-a8c8-d3bebd268334",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.Faq__Section:nth-child(15)",
+      "targets": [
+        ["css=.Faq__Section:nth-child(15)", "css:finder"],
+        ["xpath=//div[@id='shopify-section-page-faq-template']/section/div/div/div/div[2]/div/h1[4]", "xpath:idRelative"],
+        ["xpath=//h1[4]", "xpath:position"],
+        ["xpath=//h1[contains(.,'SHIPPING & RETURNS')]", "xpath:innerText"]
+      ],
+      "value": "SHIPPING & RETURNS"
+    }, {
+      "id": "f571617b-c1ac-49ea-aced-86417ac2e2ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Header__LogoImage",
+      "targets": [
+        ["css=.Header__LogoImage", "css:finder"],
+        ["xpath=//img[@alt='Seven Grams Caffé']", "xpath:img"],
+        ["xpath=//header[@id='section-header']/div/div[2]/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ed458b0-3502-4e0a-a535-5dc376ed7455",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2853ab78-3902-42bf-b275-67c5db8199e3",
+    "name": "Search bar",
+    "commands": [{
+      "id": "5a302ebf-6b16-4166-bd84-dba128baaefb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b743299-df54-428d-8008-9b49221e39d6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0484d16-dba0-4efa-bd84-1057fa19beb0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.Header__LogoImage",
+      "targets": [
+        ["css=.Header__LogoImage", "css:finder"],
+        ["xpath=//img[@alt='Seven Grams Caffé']", "xpath:img"],
+        ["xpath=//header[@id='section-header']/div/div[2]/h1/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2a51496-1b8a-43c2-a67c-18eb6d8cb318",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.CollectionItem:nth-child(1) .CollectionItem__Image",
+      "targets": [
+        ["css=.CollectionItem:nth-child(1) .CollectionItem__Image", "css:finder"],
+        ["xpath=//section[@id='section-collection-list']/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a036ae2-c573-4ad1-b447-bb43f8599e32",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.FeatureText__Content .SectionHeader__Heading",
+      "targets": [
+        ["css=.FeatureText__Content .SectionHeader__Heading", "css:finder"],
+        ["xpath=//div[@id='shopify-section-1596665666859']/section/div/div[2]/div/header/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/div/header/h2", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1a10751-3545-47e8-963f-db0167395af0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.Image--slideLeft",
+      "targets": [
+        ["css=.Image--slideLeft", "css:finder"],
+        ["xpath=//div[@id='shopify-section-1596665666859']/section/div/div/div/img", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ebb263a-fc2f-4e89-a369-6afd2cbb6c52",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Header__Icon:nth-child(1)",
+      "targets": [
+        ["css=.Header__Icon:nth-child(1)", "css:finder"],
+        ["xpath=//header[@id='section-header']/div/div/button", "xpath:idRelative"],
+        ["xpath=//header/div/div/button", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "8ea80752-6f42-4bdf-b58e-8fb18fa2fcb8",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Header__Icon:nth-child(2)",
+      "targets": [
+        ["css=.Header__Icon:nth-child(2)", "css:finder"],
+        ["xpath=//header[@id='section-header']/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/search')])[2]", "xpath:href"],
+        ["xpath=//header/div/div[3]/a", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "ec11e3c9-5950-409e-90c1-f5c0d4e959c8",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Header__Icon:nth-child(3)",
+      "targets": [
+        ["css=.Header__Icon:nth-child(3)", "css:finder"],
+        ["xpath=//header[@id='section-header']/div/div[3]/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/cart')])[2]", "xpath:href"],
+        ["xpath=//div[3]/a[2]", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "6a614270-8195-4ac6-84d4-b7448b433cf9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.Footer__Block--text > .Footer__Title",
+      "targets": [
+        ["css=.Footer__Block--text > .Footer__Title", "css:finder"],
+        ["xpath=//footer[@id='section-footer']/div/div/div/h2", "xpath:idRelative"],
+        ["xpath=//footer/div/div/div/h2", "xpath:position"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "d7b14c55-007f-4e1f-8952-24d70c279e61",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.SectionHeader__Description > p",
+      "targets": [
+        ["css=.SectionHeader__Description > p", "css:finder"],
+        ["xpath=//div[@id='shopify-section-1596665666859']/section/div/div[2]/div/header/div/p", "xpath:idRelative"],
+        ["xpath=//header/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'That’s who we are, and that’s what we do: We roast great coffee, we bake sensational cookies (and cakes, and brownies, but, come on – the cookies), and we take immense pride in being a small, independent business. No investors, no suits, no big corporates. Just a dream, hard work, and a deep passion for what we do.')]", "xpath:innerText"]
+      ],
+      "value": "That’s who we are, and that’s what we do: We roast great coffee, we bake sensational cookies (and cakes, and brownies, but, come on – the cookies), and we take immense pride in being a small, independent business. No investors, no suits, no big corporates. Just a dream, hard work, and a deep passion for what we do."
+    }, {
+      "id": "87fb240c-d8ea-4b73-9657-95b8e40a556a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.Footer__Block--text p:nth-child(1)",
+      "targets": [
+        ["css=.Footer__Block--text p:nth-child(1)", "css:finder"],
+        ["xpath=//footer[@id='section-footer']/div/div/div/div/p", "xpath:idRelative"],
+        ["xpath=//footer/div/div/div/div/p", "xpath:position"]
+      ],
+      "value": "We roast great coffee, we bake sensational cookies (and cakes, and brownies, but, come on – the cookies), and we take immense pride in being a small, independent business. No investors, no suits, no big corporates. Just a dream, hard work, and a deep passion for what we do."
+    }, {
+      "id": "668574e5-3008-4a50-aba5-d8fd522eb348",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.CollectionItem:nth-child(1) .SectionHeader__Heading",
+      "targets": [
+        ["css=.CollectionItem:nth-child(1) .SectionHeader__Heading", "css:finder"],
+        ["xpath=//section[@id='section-collection-list']/div/div/div/div[2]/header/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"]
+      ],
+      "value": "OUR OOEY GOOEY COOKIES"
+    }, {
+      "id": "090414dd-b0b3-41dd-b728-369a5d3a62ad",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.CollectionItem:nth-child(2) .SectionHeader__Heading",
+      "targets": [
+        ["css=.CollectionItem:nth-child(2) .SectionHeader__Heading", "css:finder"],
+        ["xpath=//section[@id='section-collection-list']/div/div[2]/div/div[2]/header/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/header/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'GIFT BOXES')]", "xpath:innerText"]
+      ],
+      "value": "GIFT BOXES"
+    }, {
+      "id": "16883b82-5548-4c36-852d-c8dd6c7f91b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.HorizontalList__Item:nth-child(2) > .Text--subdued",
+      "targets": [
+        ["css=.HorizontalList__Item:nth-child(2) > .Text--subdued", "css:finder"],
+        ["xpath=//a[contains(text(),'Search')]", "xpath:link"],
+        ["xpath=//header[@id='section-header']/div/div[3]/nav/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/search')]", "xpath:href"],
+        ["xpath=//div[3]/nav/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df0aa9e0-2d0b-44f0-914f-a406378b3ded",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.Search__Input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div[@id='Search']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "coffee beans"
+    }, {
+      "id": "4d96b295-13bf-474a-9853-f7dbd640c264",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.Search__Input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//div[@id='Search']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "63af57bc-27a6-4470-bb85-f02d497e2e01",
+      "comment": "",
+      "command": "click",
+      "target": "css=.PageLayout__Section:nth-child(1) .Link",
+      "targets": [
+        ["css=.PageLayout__Section:nth-child(1) .Link", "css:finder"],
+        ["xpath=//a[contains(text(),'View all')]", "xpath:link"],
+        ["xpath=//div[@id='Search']/div/div[2]/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/search?q=coffee beans*&type=product')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a5f8907-5b4f-48fb-8135-689ff2306c4a",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "       Search: 17 results found for \"coffee beans*\" – Seven Grams Caffé     ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35ee2893-5a84-4c64-aa3c-9c54fcfbc40f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.SectionHeader__Heading",
+      "targets": [
+        ["css=.SectionHeader__Heading", "css:finder"],
+        ["xpath=//main[@id='main']/section/header/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34430751-ee0a-46f8-aa88-6c05b927b980",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.SectionHeader__Description",
+      "targets": [
+        ["css=.SectionHeader__Description", "css:finder"],
+        ["xpath=//main[@id='main']/section/header/div/div/div", "xpath:idRelative"],
+        ["xpath=//section/header/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98f2464e-e115-449d-a5ac-46c9118ae1f8",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.Grid__Cell:nth-child(1) .ProductItem__Image",
+      "targets": [
+        ["css=.Grid__Cell:nth-child(1) .ProductItem__Image", "css:finder"],
+        ["xpath=//img[@alt=\"Seven Grams Caffé – The Brew Master's Coffee Bundle – Coffee Gift – Independent Coffee Roasters – Coffee Subscription\"]", "xpath:img"],
+        ["xpath=//main[@id='main']/section/div/div/div/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf9cdd76-7062-4fd4-8f49-72d18b418134",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.ProductItem__Info:nth-child(3) a",
+      "targets": [
+        ["css=.ProductItem__Info:nth-child(3) a", "css:finder"],
+        ["xpath=//main[@id='main']/section/div/div/div/div/div[2]/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/the-brew-masters-coffee-bundle?_pos=1&_sid=46655eade&_ss=r&variant=35932931031204')])[2]", "xpath:href"],
+        ["xpath=//h2/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2239b22c-0668-4947-bb26-4171bf73a229",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.Grid__Cell:nth-child(8) .ProductItem__Image",
+      "targets": [
+        ["css=.Grid__Cell:nth-child(8) .ProductItem__Image", "css:finder"],
+        ["xpath=//img[@alt='Seven Grams Caffé – Signature House Blend – Whole Coffee Beans – Independent Coffee Roasters – Coffee Subscription']", "xpath:img"],
+        ["xpath=//main[@id='main']/section/div/div[8]/div/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b280c723-21b1-465c-81b9-791c7f135466",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.Grid__Cell:nth-child(8) .ProductItem__Info a",
+      "targets": [
+        ["css=.Grid__Cell:nth-child(8) .ProductItem__Info a", "css:finder"],
+        ["xpath=//a[contains(text(),'Signature House Blend')]", "xpath:link"],
+        ["xpath=//main[@id='main']/section/div/div[8]/div/div/div/h2/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/products/signature-house-blend-coffee?_pos=8&_sid=46655eade&_ss=r&variant=35869860069540')])[2]", "xpath:href"],
+        ["xpath=//div[8]/div/div/div/h2/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61f57a2f-7214-4efa-9947-3d424b59db26",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.SectionHeader__Description",
+      "targets": [
+        ["css=.SectionHeader__Description", "css:finder"],
+        ["xpath=//main[@id='main']/section/header/div/div/div", "xpath:idRelative"],
+        ["xpath=//section/header/div/div/div", "xpath:position"]
+      ],
+      "value": "17 results for \"coffee beans\""
+    }, {
+      "id": "81f9616d-9ca5-4c24-ba2b-f9db752b473f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Header__LogoImage",
+      "targets": [
+        ["css=.Header__LogoImage", "css:finder"],
+        ["xpath=//img[@alt='Seven Grams Caffé']", "xpath:img"],
+        ["xpath=//header[@id='section-header']/div/div[2]/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24fd6ca0-9f46-4967-bfad-a48d3768a977",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "754fd6cd-9ded-4dde-bb98-9a7ab373b5ca",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["38eee40e-ce40-45ff-bd76-d9fcf58c0637"]
+  }],
+  "urls": ["https://sevengramscaffe.com/"],
+  "plugins": []
+}

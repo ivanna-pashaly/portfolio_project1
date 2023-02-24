@@ -1,0 +1,551 @@
+{
+	"info": {
+		"_postman_id": "25932f60-b6ab-451d-8fdd-a9b2fa1bb550",
+		"name": "PetStore_Order Advanced",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24933621"
+	},
+	"item": [
+		{
+			"name": "Post New Order",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.clear()",
+							"",
+							"pm.environment.set(\"ID\", Math.floor(Math.random() * 101));",
+							"",
+							"pm.environment.set(\"PETID\", Math.floor(Math.random() * 101));",
+							"",
+							"pm.environment.set(\"QTY\", Math.floor(Math.random() * 101));",
+							"",
+							"//Date in UTC format",
+							"//pm.environment.set(\"shipDate\", new Date().getTime());",
+							"",
+							"pm.environment.set(\"SHIPDATE\", new Date());",
+							"",
+							"//pm.environment.set(\"status\", \"placed\");",
+							"//pm.environment.set(\"complete\", \"false\");",
+							"",
+							"let statusPick = [\"placed\", \"approved\", \"delivered\"];",
+							"let randomStatus = statusPick[Math.floor(Math.random() * statusPick.length)];",
+							"pm.environment.set(\"STATUS\", randomStatus);",
+							"",
+							"let completePick = [true, false];",
+							"let randomComplete = completePick[Math.floor(Math.random() * completePick.length)];",
+							"pm.environment.set(\"COMPLETE\", randomComplete);",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"if(responseCode.code === 200) {",
+							"    tests[\"Backend is available, response code is 200\"] = true;",
+							"} else if (responseCode.code === 401) {",
+							"    tests[\"Not authorised, Check access token or Log in\"] = false;",
+							"} else if (responseCode.code === 403) {",
+							"    tests[\"Forbiden\"] = false;",
+							"} else if (responseCode.code === 404) {",
+							"    tests[\"Not Found. Check if you made correct request\"] = false;",
+							"} else if (responseCode.code === 422) {",
+							"    tests[\"The instance is not valid\"] = false;",
+							"} else {",
+							"    tests[\"Something went wrong. Check response body\"] = false;",
+							"}",
+							"",
+							"pm.test(\"Response Time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response Size is less than 500B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Header is correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+							"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+							"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+							"});",
+							"",
+							"//create const jsonData to improve and shorten the code",
+							"const jsonData = pm.response.json();",
+							"pm.test(\"Current ID is correct\", function () {",
+							"    pm.expect(jsonData.id).to.eql(pm.environment.get(\"ID\"));",
+							"});",
+							"pm.test(\"Current Pet-ID is correct\", function () {",
+							"    pm.expect(jsonData.petId).to.eql(pm.environment.get(\"PETID\"));",
+							"});",
+							"pm.test(\"Current Quantity is correct\", function () {",
+							"    pm.expect(jsonData.quantity).to.eql(pm.environment.get(\"QTY\"));",
+							"});",
+							"pm.test(\"Current Status is correct\", function () {",
+							"    pm.expect(jsonData.status).to.eql(pm.environment.get(\"STATUS\"));",
+							"});",
+							"pm.test(\"Order is not been shipped yet\", function () {",
+							"    pm.expect(jsonData.complete).to.eql(pm.environment.get(\"COMPLETE\"));",
+							"});",
+							"",
+							"pm.test(\"response should be okay to process\", function () {",
+							"    pm.response.to.not.be.error;",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"    pm.response.to.not.have.jsonBody(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Response body should be in correct format\", function () {",
+							"    let jsonResponse = pm.response.json();",
+							"    pm.expect(jsonResponse.id).to.be.a('number');",
+							"    pm.expect(jsonResponse.petId).to.be.a('number');",
+							"    pm.expect(jsonResponse.quantity).to.be.a('number');",
+							"    pm.expect(jsonResponse.shipDate).to.be.a('string');",
+							"    pm.expect(jsonResponse.status).to.be.a('string');",
+							"    pm.expect(jsonResponse.complete).to.be.a('boolean');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": {{ID}},\n    \"petId\": {{PETID}},\n    \"quantity\": {{QTY}},\n    \"shipDate\": \"{{SHIPDATE}}\",\n    \"status\": \"{{STATUS}}\",\n    \"complete\": {{COMPLETE}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"if(responseCode.code === 200) {",
+							"    tests[\"Backend is available, response code is 200\"] = true;",
+							"} else if (responseCode.code === 401) {",
+							"    tests[\"Not authorised, Check access token or Log in\"] = false;",
+							"} else if (responseCode.code === 403) {",
+							"    tests[\"Forbiden\"] = false;",
+							"} else if (responseCode.code === 404) {",
+							"    tests[\"Not Found. Check if you made correct request\"] = false;",
+							"} else if (responseCode.code === 422) {",
+							"    tests[\"The instance is not valid\"] = false;",
+							"} else {",
+							"    tests[\"Something went wrong. Check response body\"] = false;",
+							"}",
+							"",
+							"pm.test(\"Response Time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response Size is less than 1000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Header is correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+							"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+							"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+							"});",
+							"",
+							"//create const jsonData to improve and shorten the code",
+							"const jsonData = pm.response.json();",
+							"pm.test(\"Current ID is correct\", function () {",
+							"    pm.expect(jsonData.id).to.eql(pm.environment.get(\"ID\"));",
+							"});",
+							"pm.test(\"Current Pet-ID is correct\", function () {",
+							"    pm.expect(jsonData.petId).to.eql(pm.environment.get(\"PETID\"));",
+							"});",
+							"pm.test(\"Current Quantity is correct\", function () {",
+							"    pm.expect(jsonData.quantity).to.eql(pm.environment.get(\"QTY\"));",
+							"});",
+							"pm.test(\"Current Status is correct\", function () {",
+							"    pm.expect(jsonData.status).to.eql(pm.environment.get(\"STATUS\"));",
+							"});",
+							"pm.test(\"Order is not been shipped yet\", function () {",
+							"    pm.expect(jsonData.complete).to.eql(pm.environment.get(\"COMPLETE\"));",
+							"});",
+							"",
+							"pm.test(\"response should be okay to process\", function () {",
+							"    pm.response.to.not.be.error;",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"    pm.response.to.not.have.jsonBody(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Response body should be in correct format\", function () {",
+							"    let jsonResponse = pm.response.json();",
+							"    pm.expect(jsonResponse.id).to.be.a('number');",
+							"    pm.expect(jsonResponse.petId).to.be.a('number');",
+							"    pm.expect(jsonResponse.quantity).to.be.a('number');",
+							"    pm.expect(jsonResponse.shipDate).to.be.a('string');",
+							"    pm.expect(jsonResponse.status).to.be.a('string');",
+							"    pm.expect(jsonResponse.complete).to.be.a('boolean');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order/{{ID}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"if(responseCode.code === 200) {",
+							"    tests[\"Backend is available, response code is 200\"] = true;",
+							"} else if (responseCode.code === 401) {",
+							"    tests[\"Not authorised, Check access token or Log in\"] = false;",
+							"} else if (responseCode.code === 403) {",
+							"    tests[\"Forbiden\"] = false;",
+							"} else if (responseCode.code === 404) {",
+							"    tests[\"Not Found. Check if you made correct request\"] = false;",
+							"} else if (responseCode.code === 422) {",
+							"    tests[\"The instance is not valid\"] = false;",
+							"} else {",
+							"    tests[\"Something went wrong. Check response body\"] = false;",
+							"}",
+							"",
+							"pm.test(\"Response Time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response Size is less than 1000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Header is correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+							"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+							"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+							"});",
+							"",
+							"pm.test(\"response should be okay to process\", function () {",
+							"    pm.response.to.not.be.error;",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"    pm.response.to.not.have.jsonBody(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Deleted ID is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message).to.eql(\"\" + pm.environment.get(\"ID\"));",
+							"});",
+							"",
+							"pm.test(\"Type key/value is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+							"});",
+							"",
+							"pm.test(\"Code key/value is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(200);",
+							"});",
+							"",
+							"pm.test(\"Correct order is found\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.not.eql(404);",
+							"    pm.expect(jsonData.code).to.not.eql(400);",
+							"    pm.expect(jsonData.code).to.not.eql(500);",
+							"    pm.expect(jsonData.message).to.not.eql(\"Order Not Found\");",
+							"})",
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.not.oneOf([404, 400, 500]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order/{{ID}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Order Deletion",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(responseCode.code === 200) {",
+							"    tests[\"Backend is available, response code is 200\"] = false;",
+							"} else if (responseCode.code === 401) {",
+							"    tests[\"Not authorised, Check access token or Log in\"] = false;",
+							"} else if (responseCode.code === 403) {",
+							"    tests[\"Forbiden\"] = false;",
+							"} else if (responseCode.code === 404) {",
+							"    tests[\"Not Found. Check if you made correct request\"] = true;",
+							"} else if (responseCode.code === 422) {",
+							"    tests[\"The instance is not valid\"] = false;",
+							"} else {",
+							"    tests[\"Something went wrong. Check response body\"] = false;",
+							"}",
+							"",
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400,  404]);",
+							"});",
+							"",
+							"pm.test(\"Response Time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Response Size is less than 1000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Header is correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+							"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+							"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+							"});",
+							"",
+							"pm.test(\"Response should be okay to process\", function () {",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"    pm.response.to.not.have.jsonBody(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Deleted messageID is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message).to.not.eql(\"\" + pm.environment.get(\"ID\"));",
+							"});",
+							"",
+							"pm.test(\"Type key/value is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.type).to.eql(\"unknown\");",
+							"});",
+							"",
+							"pm.test(\"Code key/value is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(404);",
+							"});",
+							"",
+							"pm.test(\"Correct order is found\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(404);",
+							"    pm.expect(jsonData.code).to.not.eql(200);",
+							"    pm.expect(jsonData.code).to.not.eql(500);",
+							"    pm.expect(jsonData.message).to.eql(\"Order Not Found\");",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order/{{ID}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Specific Deleted Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(responseCode.code === 200) {",
+							"    tests[\"Backend is available, response code is 200\"] = false;",
+							"} else if (responseCode.code === 401) {",
+							"    tests[\"Not authorised, Check access token or Log in\"] = false;",
+							"} else if (responseCode.code === 403) {",
+							"    tests[\"Forbiden\"] = false;",
+							"} else if (responseCode.code === 404) {",
+							"    tests[\"Not Found. Check if you made correct request\"] = true;",
+							"} else if (responseCode.code === 422) {",
+							"    tests[\"The instance is not valid\"] = false;",
+							"} else {",
+							"    tests[\"Something went wrong. Check response body\"] = false;",
+							"}",
+							"",
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([400,  404]);",
+							"});",
+							"",
+							"pm.test(\"Response Time is less than 1000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Response Size is less than 1000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Header is correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+							"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Origin\", \"*\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Methods\", \"GET, POST, DELETE, PUT\");",
+							"    pm.response.to.have.header(\"Access-Control-Allow-Headers\", \"Content-Type, api_key, Authorization\");",
+							"    pm.response.to.have.header(\"Server\", \"Jetty(9.2.9.v20150224)\");",
+							"});",
+							"",
+							"pm.test(\"Response should be okay to process\", function () {",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"    pm.response.to.not.have.jsonBody(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Deleted messageID is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message).to.not.eql(\"\" + pm.environment.get(\"ID\"));",
+							"});",
+							"",
+							"pm.test(\"Type key/value is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.type).to.eql(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Code key/value is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.code).to.eql(1);",
+							"});",
+							"",
+							"pm.test(\"Correct order is found\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.message).to.eql(\"Order not found\");",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order/{{ID}}",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

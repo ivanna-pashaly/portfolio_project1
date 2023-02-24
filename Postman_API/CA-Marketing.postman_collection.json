@@ -1,0 +1,904 @@
+{
+	"info": {
+		"_postman_id": "218681ed-371c-48f0-99c9-322cbf0351b9",
+		"name": "CA-Marketing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24933621"
+	},
+	"item": [
+		{
+			"name": "Create New postal address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"if(responseCode.code === 200) {",
+							"    tests[\"Backend is available, response code is 200\"] = true;",
+							"} else if (responseCode.code === 401) {",
+							"    tests[\"Not authorised, check access token or Log in\"] = false;",
+							"} else if (responseCode.code === 403) {",
+							"    tests[\"Forbiden\"] = false;",
+							"} else if (responseCode.code === 404) {",
+							"    tests[\"Not Found. Check if you made correct request\"] = false;",
+							"} else if (responseCode.code === 422) {",
+							"    tests[\"he instance is not valid\"] = false;",
+							"} else {",
+							"    tests[\"Something went wrong. Check response body\"] = false;",
+							"}",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response size is less than 1000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Body has 'id'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"id\");",
+							"});",
+							"",
+							"pm.test(\"Header is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json;charset=utf-8\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Server\", \"Pepyaka/1.19.10\");",
+							"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+							"});",
+							"",
+							"pm.test(\"Response assertions\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.ok;",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": {\n        \"fullName\": {\n            \"firstName\": \"Bob \",\n            \"lastName\": \"White\"\n        },\n        \"company\": \"BW Co\",\n        \"taxInfo\": {\n            \"id\": null,\n            \"type\": null\n        },\n        \"addressLine1\": \"505 North County Farm Road\",\n        \"addressLine2\": null,\n        \"street\": {\n            \"name\": null,\n            \"number\": null\n        },\n        \"city\": \"Wheaton\",\n        \"country\": \"USA\",\n        \"subdivision\": \"IL\",\n        \"zipCode\": \"60187\",\n        \"phoneNumber\": \"7737752525\",\n        \"location\": {\n            \"latitude\": 41.8684159,\n            \"longitude\": -88.13871619999999\n        }\n    },\n    \"setAsDefault\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make postal address by default",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"if(responseCode.code === 200) {",
+							"    tests[\"Backend is available, response code is 200\"] = true;",
+							"} else if (responseCode.code === 401) {",
+							"    tests[\"Not authorised, check access token or Log in\"] = false;",
+							"} else if (responseCode.code === 403) {",
+							"    tests[\"Forbiden\"] = false;",
+							"} else if (responseCode.code === 404) {",
+							"    tests[\"Not Found. Check if you made correct request\"] = false;",
+							"} else if (responseCode.code === 422) {",
+							"    tests[\"he instance is not valid\"] = false;",
+							"} else {",
+							"    tests[\"Something went wrong. Check response body\"] = false;",
+							"}",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response size is less than 1000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Body matches string '{}'\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"{}\");",
+							"});",
+							"",
+							"pm.test(\"Header is correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json;charset=utf-8\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Server\", \"Pepyaka/1.19.10\");",
+							"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+							"});",
+							"",
+							"pm.test(\"Response assertions\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.ok;",
+							"    pm.response.to.be.json;",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"c2284372-ace0-475d-89bb-2c52f99b2f43\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shove all postal addresses",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response size is less than 8000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(8000);",
+							"});",
+							"",
+							"pm.test(\"New ID is in response\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"4f2b8137-dc90-4d50-8a6e-2c7c9ff63fe8\");",
+							"});",
+							"",
+							"pm.test(\"Response Header is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json;charset=utf-8\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Server\", \"Pepyaka/1.19.10\");",
+							"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+							"});",
+							"",
+							"pm.test(\"Response assertions\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.ok;",
+							"    pm.response.to.be.json;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show default address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response size is less than 8000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(8000);",
+							"});",
+							"",
+							"pm.test(\"New ID is in response\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1cbc2496-0d80-41ce-8520-93af3b2ba7c5\");",
+							"});",
+							"",
+							"pm.test(\"Response Header is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json;charset=utf-8\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Server\", \"Pepyaka/1.19.10\");",
+							"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+							"});",
+							"",
+							"pm.test(\"Response assertions\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.ok;",
+							"    pm.response.to.be.json;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/get-default-address",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses",
+						"get-default-address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shove Specific  postal addresses",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response size is less than 8000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(8000);",
+							"});",
+							"",
+							"pm.test(\"Check isDefaultAddress\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.isDefaultAddress).to.eql(true);",
+							"});",
+							"",
+							"pm.test(\"Response Header is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json;charset=utf-8\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Server\", \"Pepyaka/1.19.10\");",
+							"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+							"});",
+							"",
+							"pm.test(\"Response assertions\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.ok;",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"pm.test(\"Check phoneNumber\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.phoneNumber).to.eql(\"7737752525\");",
+							"});",
+							"",
+							"pm.test(\"Check firstName\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.fullName.firstName).to.eql(\"Bob\");",
+							"});",
+							"",
+							"pm.test(\"Check ID\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.id).to.eql(\"1cbc2496-0d80-41ce-8520-93af3b2ba7c5\");",
+							"});",
+							"",
+							"pm.test(\"Check country\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.country).to.eql(\"USA\");",
+							"});",
+							"",
+							"pm.test(\"Check subdivision\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.subdivision).to.eql(\"IL\");",
+							"});",
+							"",
+							"pm.test(\"Check city\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.city).to.eql(\"Wheaton\");",
+							"});",
+							"",
+							"pm.test(\"Check zipCode\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.zipCode).to.eql(\"60187\");",
+							"});",
+							"",
+							"pm.test(\"Check company\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.company).to.eql(\"BW Co\");",
+							"});",
+							"",
+							"pm.test(\"Check addressLine1\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.addressLine1).to.eql(\"505 North County Farm Road\");",
+							"});",
+							"",
+							"pm.test(\"Check latitude\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.location.latitude).to.eql(41.8684159);",
+							"});",
+							"",
+							"pm.test(\"Check longitude\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.location.longitude).to.eql(-88.13871619999999);",
+							"});",
+							"",
+							"pm.test(\"Entire response is correct\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.id).to.eql(\"4f2b8137-dc90-4d50-8a6e-2c7c9ff63fe8\");",
+							"    pm.expect(jsonData.address.fullName.firstName).to.eql(\"Bob\");",
+							"    pm.expect(jsonData.address.fullName.lastName).to.eql(\"White\");",
+							"    pm.expect(jsonData.address.country).to.eql(\"USA\");",
+							"    pm.expect(jsonData.address.subdivision).to.eql(\"IL\");",
+							"    pm.expect(jsonData.address.city).to.eql(\"Wheaton\");",
+							"    pm.expect(jsonData.address.zipCode).to.eql(\"60187\");",
+							"    pm.expect(jsonData.address.phoneNumber).to.eql(\"7737752525\");",
+							"    pm.expect(jsonData.address.company).to.eql(\"BW Co\");",
+							"    pm.expect(jsonData.address.addressLine1).to.eql(\"505 North County Farm Road\");",
+							"    pm.expect(jsonData.isDefaultAddress).to.eql(true);",
+							"});",
+							"",
+							"pm.test(\"Response body should be in the correct format\", function() {",
+							"    let jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address).to.be.a('object');",
+							"    pm.expect(jsonData.address.id).to.be.a('string');",
+							"    pm.expect(jsonData.address.fullName).to.be.a('object');",
+							"    pm.expect(jsonData.address.fullName.firstName).to.be.a('string');",
+							"    pm.expect(jsonData.address.fullName.lastName).to.be.a('string');",
+							"    pm.expect(jsonData.address.country).to.be.a('string');",
+							"    pm.expect(jsonData.address.subdivision).to.be.a('string');",
+							"    pm.expect(jsonData.address.city).to.be.a('string');",
+							"    pm.expect(jsonData.address.zipCode).to.be.a('string');",
+							"    pm.expect(jsonData.address.phoneNumber).to.be.a('string');",
+							"    pm.expect(jsonData.address.addressLine1).to.be.a('string');",
+							"    pm.expect(jsonData.isDefaultAddress).to.be.a('boolean');",
+							"    pm.expect(jsonData.address.location).to.be.a('object');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/c2284372-ace0-475d-89bb-2c52f99b2f43",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses",
+						"c2284372-ace0-475d-89bb-2c52f99b2f43"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update existing postal addresses",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(responseCode.code === 200) {",
+							"    tests[\"Backend is available, response code is 200\"] = true;",
+							"} else if (responseCode.code === 401) {",
+							"    tests[\"Not authorised, check access token or Log in\"] = false;",
+							"} else if (responseCode.code === 403) {",
+							"    tests[\"Forbiden\"] = false;",
+							"} else if (responseCode.code === 404) {",
+							"    tests[\"Not Found. Check if you made correct request\"] = false;",
+							"} else if (responseCode.code === 422) {",
+							"    tests[\"he instance is not valid\"] = false;",
+							"} else {",
+							"    tests[\"Something went wrong. Check response body\"] = false;",
+							"}",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response size is less than 1000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Header is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json;charset=utf-8\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Server\", \"Pepyaka/1.19.10\");",
+							"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+							"});",
+							"",
+							"pm.test(\"Address has been updated, OK\", function () {",
+							"    pm.response.to.not.be.error;",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"    pm.response.to.have.jsonBody({});",
+							"    pm.response.to.not.have.jsonBody(\"error\");",
+							"});",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": {\n        \"id\": \"4f2b8137-dc90-4d50-8a6e-2c7c9ff63fe8\",\n        \"fullName\": {\n            \"firstName\": \"Alex\",\n            \"lastName\": \"Hope\"\n        },\n        \"company\": \"Hope 2 Co\",\n        \"taxInfo\": {\n            \"id\": null,\n            \"type\": null\n        },\n        \"addressLine1\": \"550 West Ogden Avenue\",\n        \"addressLine2\": null,\n        \"street\": {\n            \"name\": null,\n            \"number\": null\n        },\n        \"city\": \"Hinsdale\",\n        \"country\": \"USA\",\n        \"subdivision\": \"IL\",\n        \"zipCode\": \"60521\",\n        \"phoneNumber\": null,\n        \"location\": {\n            \"latitude\": 41.81179269999999,\n            \"longitude\": -87.9401013\n        }\n    },\n    \"setAsDefault\": false,\n    \"fieldMask\": {\n        \"paths\": [\n            \"fullName.firstName\",\n            \"fullName.lastName\",\n            \"company\",\n            \"addressLine1\",\n            \"city\",\n            \"country\",\n            \"subdivision\",\n            \"zipCode\",\n            \"location.latitude\",\n            \"location.longitude\",\n            \"setAsDefault\"\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/1cbc2496-0d80-41ce-8520-93af3b2ba7c5",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses",
+						"1cbc2496-0d80-41ce-8520-93af3b2ba7c5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shove updated postal address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response size is less than 8000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(8000);",
+							"});",
+							"",
+							"pm.test(\"Check isDefaultAddress\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.isDefaultAddress).to.eql(false);",
+							"});",
+							"",
+							"pm.test(\"Response Header is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json;charset=utf-8\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Server\", \"Pepyaka/1.19.10\");",
+							"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+							"});",
+							"",
+							"pm.test(\"Response assertions\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.ok;",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"pm.test(\"Check firstName\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.fullName.firstName).to.eql(\"Alex\");",
+							"});",
+							"",
+							"pm.test(\"Check ID\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.id).to.eql(\"1cbc2496-0d80-41ce-8520-93af3b2ba7c5\");",
+							"});",
+							"",
+							"pm.test(\"Check country\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.country).to.eql(\"USA\");",
+							"});",
+							"",
+							"pm.test(\"Check subdivision\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.subdivision).to.eql(\"IL\");",
+							"});",
+							"",
+							"pm.test(\"Check city\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.city).to.eql(\"Hinsdale\");",
+							"});",
+							"",
+							"pm.test(\"Check zipCode\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.zipCode).to.eql(\"60521\");",
+							"});",
+							"",
+							"pm.test(\"Check company\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.company).to.eql(\"Hope 2 Co\");",
+							"});",
+							"",
+							"pm.test(\"Check addressLine1\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.addressLine1).to.eql(\"550 West Ogden Avenue\");",
+							"});",
+							"",
+							"pm.test(\"Check latitude\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.location.latitude).to.eql(41.81179269999999);",
+							"});",
+							"",
+							"pm.test(\"Check longitude\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.location.longitude).to.eql(-87.9401013);",
+							"});",
+							"",
+							"pm.test(\"Entire response is correct\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address.id).to.eql(\"1cbc2496-0d80-41ce-8520-93af3b2ba7c5\");",
+							"    pm.expect(jsonData.address.fullName.firstName).to.eql(\"Alex\");",
+							"    pm.expect(jsonData.address.fullName.lastName).to.eql(\"Hope\");",
+							"    pm.expect(jsonData.address.country).to.eql(\"USA\");",
+							"    pm.expect(jsonData.address.subdivision).to.eql(\"IL\");",
+							"    pm.expect(jsonData.address.city).to.eql(\"Hinsdale\");",
+							"    pm.expect(jsonData.address.zipCode).to.eql(\"60521\");",
+							"    pm.expect(jsonData.address.company).to.eql(\"Hope 2 Co\");",
+							"    pm.expect(jsonData.address.addressLine1).to.eql(\"550 West Ogden Avenue\");",
+							"    pm.expect(jsonData.isDefaultAddress).to.eql(false);",
+							"});",
+							"",
+							"pm.test(\"Response body should be in the correct format\", function() {",
+							"    let jsonData = pm.response.json();",
+							"    pm.expect(jsonData.address).to.be.a('object');",
+							"    pm.expect(jsonData.address.id).to.be.a('string');",
+							"    pm.expect(jsonData.address.fullName).to.be.a('object');",
+							"    pm.expect(jsonData.address.fullName.firstName).to.be.a('string');",
+							"    pm.expect(jsonData.address.fullName.lastName).to.be.a('string');",
+							"    pm.expect(jsonData.address.country).to.be.a('string');",
+							"    pm.expect(jsonData.address.subdivision).to.be.a('string');",
+							"    pm.expect(jsonData.address.city).to.be.a('string');",
+							"    pm.expect(jsonData.address.zipCode).to.be.a('string');",
+							"    pm.expect(jsonData.address.addressLine1).to.be.a('string');",
+							"    pm.expect(jsonData.isDefaultAddress).to.be.a('boolean');",
+							"    pm.expect(jsonData.address.location).to.be.a('object');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/1cbc2496-0d80-41ce-8520-93af3b2ba7c5",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses",
+						"1cbc2496-0d80-41ce-8520-93af3b2ba7c5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete existing postal address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response size is less than 8000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(8000);",
+							"});",
+							"",
+							"pm.test(\"Header is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json;charset=utf-8\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Server\", \"Pepyaka/1.19.10\");",
+							"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+							"});",
+							"",
+							"pm.test(\"Order has been deleted, OK\", function () {",
+							"    pm.response.to.not.be.error;",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"    pm.response.to.have.jsonBody({});",
+							"    pm.response.to.not.have.jsonBody(\"error\");",
+							"    pm.response.to.be.ok;",
+							"    pm.response.to.be.an(\"object\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/1cbc2496-0d80-41ce-8520-93af3b2ba7c5",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses",
+						"1cbc2496-0d80-41ce-8520-93af3b2ba7c5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific Deleted address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(responseCode.code === 200) {",
+							"    tests[\"Backend is available, response code is 200\"] = false;",
+							"} else if (responseCode.code === 401) {",
+							"    tests[\"Not authorised, check access token or Log in\"] = false;",
+							"} else if (responseCode.code === 400) {",
+							"    tests[\"Bad request 400 is OK\"] = true;",
+							"} else if (responseCode.code === 403) {",
+							"    tests[\"Forbiden\"] = false;",
+							"} else if (responseCode.code === 404) {",
+							"    tests[\"Not Found. Check if you made correct request\"] = false;",
+							"} else if (responseCode.code === 422) {",
+							"    tests[\"he instance is not valid\"] = false;",
+							"} else {",
+							"    tests[\"Something went wrong. Check response body\"] = false;",
+							"}",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response size is less than 1000B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(1000);",
+							"});",
+							"",
+							"pm.test(\"Header is present and correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json;charset=utf-8\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Server\", \"Pepyaka/1.19.10\");",
+							"    pm.response.to.have.header(\"X-Content-Type-Options\", \"nosniff\");",
+							"});",
+							"",
+							"pm.test(\"ID is in response\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1cbc2496-0d80-41ce-8520-93af3b2ba7c5\");",
+							"});",
+							"",
+							"pm.test(\"cant_find = ID\", function () {",
+							"    var jsonData = JSON.parse(responseBody);",
+							"    jsonData.details.cant_find === ('1cbc2496-0d80-41ce-8520-93af3b2ba7c5')",
+							"});",
+							"// Same test",
+							"pm.test(\"'Details' is correct\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.details.cant_find).to.eql('address_id: ' + ('1cbc2496-0d80-41ce-8520-93af3b2ba7c5'));",
+							"});",
+							"",
+							"pm.test(\"Responce should be OK to process\", function () {",
+							"    pm.response.to.be.error;",
+							"    pm.response.to.be.withBody;",
+							"    pm.response.to.be.json;",
+							"    pm.response.to.not.have.jsonBody(\"error\");",
+							"});",
+							"",
+							"pm.test(\"Responce body should be in correct format\", function () {",
+							"    let jsonResponse = pm.response.json();",
+							"    pm.expect(jsonResponse.message).to.be.a(\"string\");",
+							"    pm.expect(jsonResponse.details).to.be.a(\"object\");",
+							"    pm.expect(jsonResponse.details.cant_find).to.be.a(\"string\");",
+							"});",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/1cbc2496-0d80-41ce-8520-93af3b2ba7c5",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses",
+						"1cbc2496-0d80-41ce-8520-93af3b2ba7c5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "Fo2GGyxx7EHjR5guA7othmrTreLBUu9kY-suS-okGQk.eyJpbnN0YW5jZUlkIjoiYmE2Y2RiNDUtZjhhNy00ZjlmLWE4MzEtMDNiYWI1OTgzNDMyIiwiYXBwRGVmSWQiOiIxNDUxN2UxYS0zZmYwLWFmOTgtNDA4ZS0yYmQ2OTUzYzM2YTIiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTAxLTE3VDAwOjUyOjM2LjU2NFoiLCJ1aWQiOiJjZjRhNTFhOS1hNTUxLTQxNzEtOTZmZi0zOTNhZjMwOTI2MGMiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjYwNjI1YTAwLTU1OWUtNDgxOC05NGQ2LTI5Njk4MTdiYWI5ZCIsImJpVG9rZW4iOiI5MmRiNDg5My1hYzgzLTBmYzctMjg3OC0wMWQwZjgyODFjMWQiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0wMS0xN1QwNDo1MjozNi41NjRaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

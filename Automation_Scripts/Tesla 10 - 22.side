@@ -1,0 +1,789 @@
+{
+  "id": "9c1239ea-9a36-4ef9-b6e5-44db770063a2",
+  "version": "2.0",
+  "name": "Tesla 10 - 22",
+  "url": "https://www.tesla.com",
+  "tests": [{
+    "id": "f73fbfd1-edfc-4da6-ad07-8c86215df784",
+    "name": "Tesla - product",
+    "commands": [{
+      "id": "b8f38bb2-81be-4ef2-b904-5ef66289a1ef",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09f34b42-5b7b-4272-9cea-14c0daee9510",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x790",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86982c1a-dc4a-4cbd-9fb5-0d0ed17abd43",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tds-icon-logo-wordmark",
+      "targets": [
+        ["css=.tds-icon-logo-wordmark", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1d77c02-a4ba-42f2-ba0c-843e9daa7789",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tds-align--center > li:nth-child(1) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(1) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li/a/span", "xpath:idRelative"],
+        ["xpath=//li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model S')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd6782c2-e0a4-42e1-aa21-b16677683793",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tds-align--center > li:nth-child(2) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(2) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bfe35ffe-f143-4e09-8462-3d225f98d180",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tds-align--center > li:nth-child(3) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(3) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[3]/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59581a47-05eb-418d-9bf0-0330c984d103",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=li:nth-child(4) .tds-site-nav-item-text",
+      "targets": [
+        ["css=li:nth-child(4) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model Y')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fd980ce-2051-454d-9194-50c5055d3e96",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=li:nth-child(5) .tds-site-nav-item-text",
+      "targets": [
+        ["css=li:nth-child(5) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[5]/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Solar Roof')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dacb556-b4c7-4948-96a0-f62eef78ac0d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=li:nth-child(6) .tds-site-nav-item-text",
+      "targets": [
+        ["css=li:nth-child(6) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[6]/a/span", "xpath:idRelative"],
+        ["xpath=//li[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Solar Panels')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0105ecd-9203-4776-b73f-40f3fd9bab0b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=Model 3",
+      "targets": [
+        ["linkText=Model 3", "linkText"],
+        ["css=.tds-align--center > li:nth-child(2) > .tds-site-nav-item", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/model3')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Model 3')]", "xpath:innerText"]
+      ],
+      "value": "Model 3"
+    }, {
+      "id": "1313066b-3a90-4d40-a52e-f2f05bc5ecef",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.tds-align--center > li:nth-child(1) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(1) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li/a/span", "xpath:idRelative"],
+        ["xpath=//li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model S')]", "xpath:innerText"]
+      ],
+      "value": "Model S"
+    }, {
+      "id": "b4e29e0e-47a5-41ca-a32b-0ee8ade8795b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.tds-align--center > li:nth-child(2) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(2) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model 3')]", "xpath:innerText"]
+      ],
+      "value": "Model 3"
+    }, {
+      "id": "947905a5-4e69-486b-a0f7-0ea396cd8958",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.tds-align--center > li:nth-child(3) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(3) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[3]/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model X')]", "xpath:innerText"]
+      ],
+      "value": "Model X"
+    }, {
+      "id": "39da322a-b3c2-4cf5-8a2a-70fc89f757b0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=li:nth-child(4) .tds-site-nav-item-text",
+      "targets": [
+        ["css=li:nth-child(4) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model Y')]", "xpath:innerText"]
+      ],
+      "value": "Model Y"
+    }, {
+      "id": "c016a87e-577e-444a-a762-36b65e6682de",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=li:nth-child(5) .tds-site-nav-item-text",
+      "targets": [
+        ["css=li:nth-child(5) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[5]/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Solar Roof')]", "xpath:innerText"]
+      ],
+      "value": "Solar Roof"
+    }, {
+      "id": "d09fad32-7dd9-482d-844f-1f878d62c388",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=li:nth-child(6) .tds-site-nav-item-text",
+      "targets": [
+        ["css=li:nth-child(6) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[6]/a/span", "xpath:idRelative"],
+        ["xpath=//li[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Solar Panels')]", "xpath:innerText"]
+      ],
+      "value": "Solar Panels"
+    }, {
+      "id": "1b7ede6a-bdbd-4e65-bdfb-81f15584ada9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=Custom Order",
+      "targets": [
+        ["linkText=Custom Order", "linkText"],
+        ["css=.tcl-homepage-hero__content:nth-child(1) .tcl-homepage-hero__buttons:nth-child(1) .tds-btn:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='block-tesla-frontend-content']/div/section/div/div/div/section/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/model3/design')]", "xpath:href"],
+        ["xpath=//section/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Custom Order')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "f7a75277-d98c-473f-a441-bb8ad9b58f74",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=Shop",
+      "targets": [
+        ["linkText=Shop", "linkText"],
+        ["css=.tds-align--end > li:nth-child(1) > .tds-site-nav-item", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://shop.tesla.com')]", "xpath:href"],
+        ["xpath=//ol[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "233b96fa-cc90-4e75-87a2-b6622b81271e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=Account",
+      "targets": [
+        ["linkText=Account", "linkText"],
+        ["css=.tds-align--end > li:nth-child(2) > .tds-site-nav-item", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/teslaaccount')]", "xpath:href"],
+        ["xpath=//ol[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "e40a3192-9189-49a6-bed8-89372e7de4f5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.tds-align--end > li:nth-child(3) > .tds-site-nav-item",
+      "targets": [
+        ["css=.tds-align--end > li:nth-child(3) > .tds-site-nav-item", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//header[@id='tds-site-header']/ol[2]/li[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Menu')]", "xpath:innerText"]
+      ],
+      "value": "2000"
+    }, {
+      "id": "6842e97a-055c-4901-8d5d-09a5f9ed554e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.tcl-homepage-hero__content:nth-child(1) .tcl-homepage-hero__buttons:nth-child(1) .tds-btn:nth-child(1) > span",
+      "targets": [
+        ["css=.tcl-homepage-hero__content:nth-child(1) .tcl-homepage-hero__buttons:nth-child(1) .tds-btn:nth-child(1) > span", "css:finder"],
+        ["xpath=//div[@id='block-tesla-frontend-content']/div/section/div/div/div/section/a/span", "xpath:idRelative"],
+        ["xpath=//section/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Custom Order')]", "xpath:innerText"]
+      ],
+      "value": "Custom Order"
+    }, {
+      "id": "c41c265a-c281-409b-8fd3-02e74b422b81",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Demo Drive",
+      "targets": [
+        ["linkText=Demo Drive", "linkText"],
+        ["css=.tcl-homepage-hero__content:nth-child(1) .tcl-homepage-hero__buttons:nth-child(1) .tds-btn:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='block-tesla-frontend-content']/div/section/div/div/div/section/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/drive')]", "xpath:href"],
+        ["xpath=//section/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Demo Drive')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3419454-7ca1-4cf4-9cc5-e83842ae135b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.tcl-homepage-hero__content:nth-child(1) .tcl-homepage-hero__buttons:nth-child(1) .tds-btn:nth-child(2) > span",
+      "targets": [
+        ["css=.tcl-homepage-hero__content:nth-child(1) .tcl-homepage-hero__buttons:nth-child(1) .tds-btn:nth-child(2) > span", "css:finder"],
+        ["xpath=//div[@id='block-tesla-frontend-content']/div/section/div/div/div/section/a[2]/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Demo Drive')]", "xpath:innerText"]
+      ],
+      "value": "Demo Drive"
+    }, {
+      "id": "e2f9c986-c697-4029-a81b-902b2ad33074",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tds-align--center > li:nth-child(1) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(1) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li/a/span", "xpath:idRelative"],
+        ["xpath=//li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model S')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db5a5167-4aae-4344-8828-8de592479ff9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tds-animate_small--reveal > .tcl-hero__heading",
+      "targets": [
+        ["css=.tds-animate_small--reveal > .tcl-hero__heading", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-1936']/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//div[2]/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Model S')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8507fc63-3e31-41a0-8edf-014bdc4c6c86",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-hero__subcopy-desktop",
+      "targets": [
+        ["css=.tcl-hero__subcopy-desktop", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-1936']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Plaid')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c021d79-1b15-479a-9d19-1ad5a8e4918e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(1)",
+      "targets": [
+        ["css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(1)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-1936']/div[2]/div/section/section", "xpath:idRelative"],
+        ["xpath=//section/section", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "919f82e1-7a08-4e7c-adeb-e331c8f83cc2",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(2)",
+      "targets": [
+        ["css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-1936']/div[2]/div/section/section[2]", "xpath:idRelative"],
+        ["xpath=//section[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14f9811e-c2da-4db8-af7a-25eab22e1300",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(3)",
+      "targets": [
+        ["css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(3)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-1936']/div[2]/div/section/section[3]", "xpath:idRelative"],
+        ["xpath=//section[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f011d904-eb1b-4245-b438-7478dbb33f08",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badge:nth-child(4)",
+      "targets": [
+        ["css=.tcl-badge:nth-child(4)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-1936']/div[2]/div/section/section[4]", "xpath:idRelative"],
+        ["xpath=//section[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "69fd8764-ee2a-43fb-8893-1f844bba3deb",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Order Now",
+      "targets": [
+        ["linkText=Order Now", "linkText"],
+        ["css=.tcl-badges__button > .tds-btn", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-1936']/div[2]/div/section/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/models/design')]", "xpath:href"],
+        ["xpath=//section/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Order Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d14adb30-1d1f-4395-97b9-365ca7b4ff5d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=tw-chat--avaya-chat__animated_button",
+      "targets": [
+        ["id=tw-chat--avaya-chat__animated_button", "id"],
+        ["css=#tw-chat--avaya-chat__animated_button", "css:finder"],
+        ["xpath=//button[@id='tw-chat--avaya-chat__animated_button']", "xpath:attributes"],
+        ["xpath=//body[@id='page-model-s']/div[16]/div/button", "xpath:idRelative"],
+        ["xpath=//div[16]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1eff6d7-a487-47e1-a243-861faee25fe3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.tds-align--center > li:nth-child(1) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(1) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li/a/span", "xpath:idRelative"],
+        ["xpath=//li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model S')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9248787-066a-46bc-99d5-eebda128d2ba",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.tds-align--center > li:nth-child(1) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(1) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li/a/span", "xpath:idRelative"],
+        ["xpath=//li/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model S')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "84d2bf69-f74f-4d5e-adca-3eb22f8d7b16",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tds-align--center > li:nth-child(2) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(2) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6f28e60-2380-4a62-98f3-57003d01b007",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-hero__heading",
+      "targets": [
+        ["css=.tcl-hero__heading", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2895']/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//div[2]/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Model 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "deb75539-f0d5-4818-9d06-2377dfe3e51e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(1)",
+      "targets": [
+        ["css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(1)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2895']/div[2]/div/section/section", "xpath:idRelative"],
+        ["xpath=//section/section", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52e59602-c300-489b-a108-9d6b72b16d7f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(2)",
+      "targets": [
+        ["css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2895']/div[2]/div/section/section[2]", "xpath:idRelative"],
+        ["xpath=//section[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d68f962c-37bd-4111-8ee4-b3f81ba66722",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(3)",
+      "targets": [
+        ["css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(3)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2895']/div[2]/div/section/section[3]", "xpath:idRelative"],
+        ["xpath=//section[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c052a674-c318-4ce2-b8d1-2f1d76d390ee",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Order Now",
+      "targets": [
+        ["linkText=Order Now", "linkText"],
+        ["css=.tcl-badges__button > .tds-btn", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2895']/div[2]/div/section/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/model3/design')]", "xpath:href"],
+        ["xpath=//section/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Order Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f12c6bfb-ebf1-471d-a398-1d3eea059e14",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=tw-chat--avaya-chat__animated_button",
+      "targets": [
+        ["id=tw-chat--avaya-chat__animated_button", "id"],
+        ["css=#tw-chat--avaya-chat__animated_button", "css:finder"],
+        ["xpath=//button[@id='tw-chat--avaya-chat__animated_button']", "xpath:attributes"],
+        ["xpath=//body[@id='page-model-3']/div[14]/div/button", "xpath:idRelative"],
+        ["xpath=//div[14]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f994f10-e341-4b4c-a0d7-74f38c4e9025",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.tds-align--center > li:nth-child(2) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(2) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf7d21ec-3083-4cd0-80d9-fbe9b96141ea",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.tds-align--center > li:nth-child(2) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(2) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model 3')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f4ba8ff-2b0f-47d1-9427-75549905f458",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tds-align--center > li:nth-child(3) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(3) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[3]/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f0746e0-51b2-42b9-8ded-56e475f6623d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tds-animate_small--reveal > .tcl-hero__heading",
+      "targets": [
+        ["css=.tds-animate_small--reveal > .tcl-hero__heading", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2846']/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//div[2]/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Model X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "61839d25-d16e-4458-90a1-1a6ba7ef2eb2",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-hero__subcopy-desktop",
+      "targets": [
+        ["css=.tcl-hero__subcopy-desktop", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2846']/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Plaid')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c314a80-6995-4807-829c-c8aed776e393",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(1)",
+      "targets": [
+        ["css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(1)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2846']/div[2]/div/section/section", "xpath:idRelative"],
+        ["xpath=//section/section", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e4e171f-dd81-47fb-b29b-fbdcd6f1db63",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(2)",
+      "targets": [
+        ["css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2846']/div[2]/div/section/section[2]", "xpath:idRelative"],
+        ["xpath=//section[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48452588-2723-4216-bd75-d3e96697cc52",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(3)",
+      "targets": [
+        ["css=.tcl-badges--four-badges-with-button > .tcl-badge:nth-child(3)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2846']/div[2]/div/section/section[3]", "xpath:idRelative"],
+        ["xpath=//section[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2418d477-2abc-4d76-ab80-f3b9cf063617",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badge:nth-child(4)",
+      "targets": [
+        ["css=.tcl-badge:nth-child(4)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2846']/div[2]/div/section/section[4]", "xpath:idRelative"],
+        ["xpath=//section[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d378128-ef74-4e39-a6d5-49b30d481893",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Order Now",
+      "targets": [
+        ["linkText=Order Now", "linkText"],
+        ["css=.tcl-badges__button > .tds-btn", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-2846']/div[2]/div/section/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/modelx/design')]", "xpath:href"],
+        ["xpath=//section/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Order Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc6306ce-0d2c-4efa-bdb9-2e5a2be47447",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=tw-chat--avaya-chat__animated_button",
+      "targets": [
+        ["id=tw-chat--avaya-chat__animated_button", "id"],
+        ["css=#tw-chat--avaya-chat__animated_button", "css:finder"],
+        ["xpath=//button[@id='tw-chat--avaya-chat__animated_button']", "xpath:attributes"],
+        ["xpath=//body[@id='page-model-x']/div[18]/div/button", "xpath:idRelative"],
+        ["xpath=//div[18]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2325ad5-ea74-4de1-abf3-fad451f95914",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.tds-align--center > li:nth-child(3) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(3) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[3]/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d8d8ba4-b919-4ac6-a1f9-a9df40b6956b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.tds-align--center > li:nth-child(3) .tds-site-nav-item-text",
+      "targets": [
+        ["css=.tds-align--center > li:nth-child(3) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[3]/a/span", "xpath:idRelative"],
+        ["xpath=//li[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9457a88-3371-4872-8884-fd5113edc38c",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(4) .tds-site-nav-item-text",
+      "targets": [
+        ["css=li:nth-child(4) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Model Y')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "883fb0aa-73d0-4eb6-8990-6d45365ce80e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-hero__heading",
+      "targets": [
+        ["css=.tcl-hero__heading", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-732']/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//div[2]/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Model Y')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da6ef92b-be96-4bb6-9807-0e4cd505263f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(1)",
+      "targets": [
+        ["css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(1)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-732']/div[2]/div/section/section", "xpath:idRelative"],
+        ["xpath=//section/section", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "251d13ae-8dc1-43de-8fee-cb0a4ffa72b3",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(2)",
+      "targets": [
+        ["css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-732']/div[2]/div/section/section[2]", "xpath:idRelative"],
+        ["xpath=//section[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73a4179f-a9e5-4df1-afe6-31f80ba5f629",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(3)",
+      "targets": [
+        ["css=.tcl-badges--three-badges-with-button > .tcl-badge:nth-child(3)", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-732']/div[2]/div/section/section[3]", "xpath:idRelative"],
+        ["xpath=//section[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d396289c-aa76-4100-98dc-2eee1a3dc9a2",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "linkText=Order Now",
+      "targets": [
+        ["linkText=Order Now", "linkText"],
+        ["css=.tcl-badges__button > .tds-btn", "css:finder"],
+        ["xpath=//section[@id='tesla-hero-732']/div[2]/div/section/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/modely/design')]", "xpath:href"],
+        ["xpath=//section/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Order Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b1384d1-974e-42aa-b654-d49a4b70d19d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=tw-chat--avaya-chat__animated_button",
+      "targets": [
+        ["id=tw-chat--avaya-chat__animated_button", "id"],
+        ["css=#tw-chat--avaya-chat__animated_button", "css:finder"],
+        ["xpath=//button[@id='tw-chat--avaya-chat__animated_button']", "xpath:attributes"],
+        ["xpath=//body[@id='page-model-y']/div[14]/div/button", "xpath:idRelative"],
+        ["xpath=//div[14]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "285f0434-82ae-497c-8668-3c8c51a8e7a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(5) .tds-site-nav-item-text",
+      "targets": [
+        ["css=li:nth-child(5) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[5]/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Solar Roof')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8279ade6-9525-453e-8232-e3039e3c0d9b",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(6) .tds-site-nav-item-text",
+      "targets": [
+        ["css=li:nth-child(6) .tds-site-nav-item-text", "css:finder"],
+        ["xpath=//header[@id='tds-site-header']/ol/li[6]/a/span", "xpath:idRelative"],
+        ["xpath=//li[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Solar Panels')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ed6233f-5dc1-489a-b8f2-3a085da62e64",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tds-site-logo-link > .tds-icon-logo-wordmark",
+      "targets": [
+        ["css=.tds-site-logo-link > .tds-icon-logo-wordmark", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a043d1b1-cd73-4a90-9f7c-07b0dc3e6145",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f5d24f79-1697-4539-9ada-9f413108fd5f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f73fbfd1-edfc-4da6-ad07-8c86215df784"]
+  }],
+  "urls": ["https://www.tesla.com/"],
+  "plugins": []
+}
